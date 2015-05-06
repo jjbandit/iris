@@ -14,3 +14,7 @@
 
 # Ignore public assets
 public/*
+
+# Bower packages can be reimported with bower update
+bower_components/
+
