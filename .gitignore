@@ -18,3 +18,6 @@ public/*
 # Bower packages can be reimported with bower update
 bower_components/
 
+# Custom tree command
+tree.sh
+
