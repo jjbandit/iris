@@ -12,12 +12,15 @@
 !/log/.keep
 /tmp
 
+# Gemfile.lock
+Gemfile.lock
+
 # Ignore public assets
 public/*
 
-# Bower packages can be reimported with bower update
-bower_components/
+# Bower packages can be reimported with rake bower:update
+vendor/assets/bower_components/
+vendor/assets/bower.json
 
 # Custom tree command
 tree.sh
-
