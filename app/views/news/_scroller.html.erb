@@ -1,19 +1,16 @@
 <h1>News</h1>
 
-<table>
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
-        <td><%= news.body %></td>
-				<% if user_signed_in? %>
-					<td><%= link_to 'Show', news %></td>
-					<td><%= link_to 'Edit', edit_news_path(news) %></td>
-					<td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				<% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+	<% @news.each do |news| %>
+		<div class='news-article'>
+			<h2> <%= news.title %> </h2>
+			<p> <%= news.body %> </p>
+
+			<% if current_user.try(:admin?) %>
+				<%= link_to 'Show', news %>
+				<%= link_to 'Edit', edit_news_path(news) %>
+				<%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+		</div>
+	<% end %>
 
 <br>
