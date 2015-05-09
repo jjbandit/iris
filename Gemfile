@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Authentication gem
+gem 'devise'
+
 # Bower goodness
 gem 'bower-rails'
 
