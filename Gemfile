@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# twbs - depends on sass-rails gem
+gem 'bootstrap-sass'
+
 # Authentication gem
 gem 'devise'
 
