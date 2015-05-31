@@ -5,12 +5,14 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = News.all
+		@allNews = News.order('created_at desc').limit(6);
+		@news = News.last
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
+		@allNews = News.order('created_at desc').limit(6);
   end
 
   # GET /news/new

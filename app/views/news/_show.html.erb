@@ -1,0 +1,12 @@
+<p>
+	<%= @news.title %>
+</p>
+
+<p>
+	<%= @news.body %>
+</p>
+
+<% if current_user.try(:admin?) %>
+	<%= link_to 'Edit', edit_news_path(news) %>
+	<%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
