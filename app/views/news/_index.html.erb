@@ -1,5 +1,5 @@
 <h1>Recent News</h1>
-<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link' %>
+<h4><%= link_to_previous_page @allNews, 'Previous News', class: 'col-md-12 page-link' %></h4>
 
 <% @allNews.each do |news| %>
 
@@ -26,9 +26,13 @@
 		<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
 		<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
 
-		<%= link_to 'Read More ..', news_path(news, page: params[:page]), class: 'read-more' %>
+		<% if controller_name == "welcome" %>
+			<%= link_to 'Continue Reading..', news_path(news), class: 'read-more' %>
+		<% else %>
+			<%= link_to 'Continue Reading..', news_path(news, page: params[:page]), class: 'read-more' %>
+		<% end %>
 
 	</div>
 <% end %>
 
-<%= link_to_next_page @allNews, 'More News', class: 'page-link'%>
+<h4><%= link_to_next_page @allNews, 'More News', remote: true, class: 'col-md-12 page-link'%></h4>
