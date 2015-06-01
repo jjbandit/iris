@@ -19,7 +19,7 @@
 		<h2> <%= news.title %> </h2>
 		<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
 
-		<%= link_to 'Read More ..', news, class: 'read-more' %>
+		<%= link_to 'Read More ..', news_path(news, page: params[:page]), class: 'read-more' %>
 
 	</div>
 <% end %>
