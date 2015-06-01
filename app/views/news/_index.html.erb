@@ -2,7 +2,12 @@
 <%= link_to_previous_page @allNews, 'Previous News', class: 'page-link' %>
 
 <% @allNews.each do |news| %>
-	<div class='col-md-12'>
+
+		<% if controller_name == "welcome" %>
+			<div class='col-md-4'>
+		<% else %>
+			<div class='col-md-12'>
+		<% end %>
 
 		<div>
 			<% if current_user.try(:admin?) %>
