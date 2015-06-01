@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'will_paginate'
 
 # twbs - depends on sass-rails and autoprefixer
 gem 'bootstrap-sass'
@@ -22,12 +23,15 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-#
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Use edge version for blocking of scroll to page-top on reload
 gem 'turbolinks', git: 'git://github.com/rails/turbolinks.git'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
