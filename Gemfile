@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'spree_frontend'
+gem 'spree_backend'
+gem 'spree_core'
+
 gem 'kaminari'
 
 # twbs - depends on sass-rails and autoprefixer
