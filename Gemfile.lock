@@ -262,6 +262,8 @@ GEM
       spree_api (= 3.0.1)
       spree_core (= 3.0.1)
       sprockets-rails (~> 2.2)
+    spree_sample (3.0.1)
+      spree_core (= 3.0.1)
     spring (1.3.6)
     sprockets (3.1.0)
       rack (~> 1.0)
@@ -312,6 +314,7 @@ DEPENDENCIES
   bootstrap-sass
   bower-rails
   byebug
+  deface (= 1.0.1)
   devise
   jbuilder (~> 2.0)
   jquery-rails
@@ -324,6 +327,7 @@ DEPENDENCIES
   spree_backend (= 3.0.1)
   spree_core (= 3.0.1)
   spree_frontend (= 3.0.1)
+  spree_sample (= 3.0.1)
   spring
   turbolinks!
   uglifier (>= 1.3.0)
