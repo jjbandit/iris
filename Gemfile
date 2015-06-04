@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'spree_frontend'
-gem 'spree_backend'
-gem 'spree_core'
+gem 'spree_frontend', '3.0.1'
+gem 'spree_backend', '3.0.1'
+gem 'spree_core', '3.0.1'
 
+# Pagination gem
 gem 'kaminari'
 
 # twbs - depends on sass-rails and autoprefixer
