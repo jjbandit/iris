@@ -9,3 +9,5 @@
 20.times do |i|
 	News.create(title: 'title ' + i.to_s, body: 'Quisque sodales mollis hendrerit. Vestibulum porttitor a massa at scelerisque. Integer augue nulla, ornare non nibh non, feugiat facilisis turpis. Nulla eleifend auctor placerat. Nam maximus eleifend sollicitudin. Aenean vulputate, nisl quis convallis feugiat, elit tortor euismod massa, sit amet volutpat dui ante et massa. Fusce fringilla urna sit amet ipsum tempor, at egestas justo commodo. Aliquam vestibulum orci non ligula tempor tristique. Sed quis felis ut quam maximus imperdiet. Donec condimentum convallis ante. Integer rhoncus efficitur varius. Nunc blandit nisl ut ligula sagittis, eu feugiat quam aliquam');
 end
+
+User.create(email: 'test@gmail.com', admin: true, password: 'password', password_confirmation: 'password')
