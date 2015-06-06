@@ -2,11 +2,13 @@
 
 
 <% if current_user.try(:admin?) %>
-	<%= link_to 'Edit', edit_news_path(news) %>
-	<%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to 'Edit', edit_news_path(@news) %>
+	<%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
-<%= link_to image_tag @news.image.url :med, @post.image.url %>
+<div>
+	<%= image_tag @news.image.url(:large), class: 'full-width'%>
+</div>
 
 <p>
 <%= @news.body %>
