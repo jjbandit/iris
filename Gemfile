@@ -2,6 +2,13 @@ source 'https://rubygems.org'
 
 gem 'paperclip', '~> 4.2'
 
+gem 'spree_frontend', '3.0.1'
+gem 'spree_backend', '3.0.1'
+gem 'spree_core', '3.0.1'
+gem 'spree_sample', '3.0.1'
+gem 'deface', '1.0.1'
+
+# Pagination gem
 gem 'kaminari'
 
 # twbs - depends on sass-rails and autoprefixer
