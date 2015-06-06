@@ -3,7 +3,7 @@
 
 <% @allNews.each do |news| %>
 
-		<% if controller_name == "welcome" %>
+		<% if controller_name == "home" %>
 			<div class='col-md-4'>
 		<% else %>
 			<div class='col-md-12'>
@@ -26,7 +26,7 @@
 		<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
 		<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
 
-		<% if controller_name == "welcome" %>
+		<% if controller_name == "home" %>
 			<%= link_to 'Continue Reading..', news_path(news), class: 'read-more' %>
 		<% else %>
 			<%= link_to 'Continue Reading..', news_path(news, page: params[:page]), class: 'read-more' %>
