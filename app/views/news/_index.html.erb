@@ -25,9 +25,9 @@
 		<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
 
 		<% if controller_name == "home" %>
-			<%= link_to 'Continue Reading..', news_path(news), class: 'read-more' %>
+			<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
 		<% else %>
-			<%= link_to 'Continue Reading..', news_path(news, page: params[:page]), class: 'read-more' %>
+			<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
 		<% end %>
 
 		<div>
