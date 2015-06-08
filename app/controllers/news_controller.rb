@@ -5,14 +5,14 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-		@allNews = News.order('created_at DESC').page(params[:page]).per(6)
+		@allNews = News.order('created_at DESC').page(params[:page]).per(4)
 		@news = News.last
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
-		@allNews = News.order('created_at DESC').page(params[:page]).per(6)
+		@allNews = News.order('created_at DESC').page(params[:page]).per(4)
   end
 
   # GET /news/new

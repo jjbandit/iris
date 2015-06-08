@@ -1,45 +1,49 @@
 <div class='news-index'>
-<h1>Recent News</h1>
+	<h1>Recent News</h1>
 
-	<% if current_user.try(:admin?) %>
-		<div >
-			<%= link_to 'Create News', new_news_path %>
+		<% if current_user.try(:admin?) %>
+			<div >
+				<%= link_to 'Create News', new_news_path %>
+			</div>
+		<% end %>
+
+		<div class='col-md-12 news-page-link-wrapper'>
+			<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link fa fa-ellipsis-h' %>
+		</div>
+
+	<% @allNews.each do |news| %>
+
+			<% if controller_name == "home" %>
+				<div class='col-md-4'>
+			<% else %>
+				<div class='col-md-12'>
+			<% end %>
+
+
+			<h2> <%= news.title %> </h2>
+			<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
+			<div>
+				<%= image_tag news.image.url(:thumb) %>
+			</div>
+			<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
+
+			<% if controller_name == "home" %>
+				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
+			<% else %>
+				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
+			<% end %>
+
+			<div>
+				<% if current_user.try(:admin?) %>
+					<%= link_to 'Edit', edit_news_path(news) %>
+					<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+				<% end %>
+			</div>
+
 		</div>
 	<% end %>
 
-<h4><%= link_to_previous_page @allNews, 'Previous News', class: 'col-md-12 page-link' %></h4>
-
-<% @allNews.each do |news| %>
-
-		<% if controller_name == "home" %>
-			<div class='col-md-4'>
-		<% else %>
-			<div class='col-md-12'>
-		<% end %>
-
-
-		<h2> <%= news.title %> </h2>
-		<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
-		<div>
-			<%= image_tag news.image.url(:thumb) %>
-		</div>
-		<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
-
-		<% if controller_name == "home" %>
-			<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
-		<% else %>
-			<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
-		<% end %>
-
-		<div>
-			<% if current_user.try(:admin?) %>
-				<%= link_to 'Edit', edit_news_path(news) %>
-				<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-			<% end %>
-		</div>
-
+	<div class='col-md-12 news-page-link-wrapper'>
+		<%= link_to_next_page @allNews, 'More News', class: 'page-link fa fa-ellipsis-h'%>
 	</div>
-<% end %>
-
-<h4><%= link_to_next_page @allNews, 'More News', remote: true, class: 'col-md-12 page-link'%></h4>
 </div>
