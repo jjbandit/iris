@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# awesome
+gem 'font-awesome-rails'
+
+# Image processing gem
 gem 'paperclip', '~> 4.2'
 
 gem 'spree_frontend', '3.0.1'

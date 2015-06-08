@@ -316,6 +316,7 @@ DEPENDENCIES
   byebug
   deface (= 1.0.1)
   devise
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
