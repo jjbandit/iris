@@ -14,23 +14,26 @@
 	<% @allNews.each do |news| %>
 
 			<% if controller_name == "home" %>
-				<div class='col-md-4'>
+				<div class='col-md-4 news-teaser'>
 			<% else %>
-				<div class='col-md-12'>
+				<div class='col-md-12 news-teaser'>
 			<% end %>
 
 
 			<h2> <%= news.title %> </h2>
 			<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
 			<div>
-				<%= image_tag news.image.url(:thumb) %>
+				<%= image_tag news.image.url(:thumb), class: 'news-thumb', align: 'left' %>
+				<p>
+					<%= truncate(news.body, length: 100, separator: '.') %>
+				</p>
 			</div>
-			<p> <%= truncate(news.body, length: 100, separator: '.') %> </p>
 
-			<% if controller_name == "home" %>
-				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
-			<% else %>
+			<%# don't preserve :page in url if we're not linking from the news controller %>
+			<% if controller_name == "news" %>
 				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
+			<% else %>
+				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
 			<% end %>
 
 			<div>
