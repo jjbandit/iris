@@ -20,7 +20,7 @@
 			<% end %>
 
 
-			<h2> <%= news.title %> </h2>
+			<h3> <%= news.title %> </h3>
 			<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
 			<div>
 				<%= image_tag news.image.url(:thumb), class: 'news-thumb', align: 'left' %>
