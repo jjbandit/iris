@@ -10,22 +10,26 @@ img.news-thumb {
 	margin: 0 7px 0 0;
 }
 
-.page-link:link {
-	font-size: 16px;
-	text-align: center;
-}
 
-.page-link:before {
+
+.page-link {
+	&:link {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	&:before {
 	border: none;
 	font-size: 25px;
 	display: block;
 	margin: 0 auto -38px auto;
-}
+	}
 
-.page-link:hover,
-.page-link:focus,
-.page-link:active {
-	text-decoration: none;
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
 }
 
 .news-page-link-wrapper {
