@@ -1,52 +1,53 @@
-<div class='news-index'>
+<div id='news-index-wrapper'>
 	<h1>Recent News</h1>
+	<div id='news-index-content'>
+			<% if current_user.try(:admin?) %>
+				<div >
+					<%= link_to 'Create News', new_news_path %>
+				</div>
+			<% end %>
 
-		<% if current_user.try(:admin?) %>
-			<div >
-				<%= link_to 'Create News', new_news_path %>
+			<div class='col-md-12 news-page-link-wrapper'>
+				<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link fa fa-ellipsis-h' %>
+			</div>
+
+		<% @allNews.each do |news| %>
+
+				<% if controller_name == "home" %>
+					<div class='col-md-4 news-teaser'>
+				<% else %>
+					<div class='col-md-12 news-teaser'>
+				<% end %>
+
+
+				<h3> <%= news.title %> </h3>
+				<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
+				<div>
+					<%= image_tag news.image.url(:thumb), class: 'news-thumb', align: 'left' %>
+					<p>
+						<%= truncate(news.body, length: 100, separator: '.') %>
+					</p>
+				</div>
+
+				<%# don't preserve :page in url if we're not linking from the news controller %>
+				<% if controller_name == "news" %>
+					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
+				<% else %>
+					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
+				<% end %>
+
+				<div>
+					<% if current_user.try(:admin?) %>
+						<%= link_to 'Edit', edit_news_path(news) %>
+						<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+					<% end %>
+				</div>
+
 			</div>
 		<% end %>
 
 		<div class='col-md-12 news-page-link-wrapper'>
-			<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link fa fa-ellipsis-h' %>
+			<%= link_to_next_page @allNews, 'More News', class: 'page-link fa fa-ellipsis-h'%>
 		</div>
-
-	<% @allNews.each do |news| %>
-
-			<% if controller_name == "home" %>
-				<div class='col-md-4 news-teaser'>
-			<% else %>
-				<div class='col-md-12 news-teaser'>
-			<% end %>
-
-
-			<h3> <%= news.title %> </h3>
-			<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
-			<div>
-				<%= image_tag news.image.url(:thumb), class: 'news-thumb', align: 'left' %>
-				<p>
-					<%= truncate(news.body, length: 100, separator: '.') %>
-				</p>
-			</div>
-
-			<%# don't preserve :page in url if we're not linking from the news controller %>
-			<% if controller_name == "news" %>
-				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
-			<% else %>
-				<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
-			<% end %>
-
-			<div>
-				<% if current_user.try(:admin?) %>
-					<%= link_to 'Edit', edit_news_path(news) %>
-					<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-				<% end %>
-			</div>
-
-		</div>
-	<% end %>
-
-	<div class='col-md-12 news-page-link-wrapper'>
-		<%= link_to_next_page @allNews, 'More News', class: 'page-link fa fa-ellipsis-h'%>
 	</div>
 </div>
