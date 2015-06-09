@@ -60,14 +60,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+	# Random data generator
+	gem 'lorem_ipsum_amet'
+
 group :development, :test do
 
 	# Deployment automation
 	gem 'capistrano', '~> 3.4.0'
 	gem 'capistrano-rails', '~> 1.1.1'
-
-	# Random data generator
-	gem 'lorem_ipsum_amet'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
