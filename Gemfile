@@ -38,6 +38,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 
@@ -60,6 +61,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+	# Deployment automation
+	gem 'capistrano', '~> 3.4.0'
+	gem 'capistrano-rails', '~> 1.1.1'
 
 	# Random data generator
 	gem 'lorem_ipsum_amet'
