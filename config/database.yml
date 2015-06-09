@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: iris_production
-  username: cap_user
+  username: cap-user
   password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>
