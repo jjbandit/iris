@@ -9,6 +9,9 @@
 
 server 'server', roles: %w{app web db}, user: 'cap-user'
 set :deploy_to, '/home/cap-user/www/iris'
+set :deploy_via, :copy
+
+set :ssh_options, { forward_agent: true}
 
 # role-based syntax
 # ==================

@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'iris'
 set :repo_url, 'git@github.com:jjbandit/iris.git'
-set :user, 'scallywag'
+set :user, 'cap-user'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
