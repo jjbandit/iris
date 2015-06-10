@@ -12,38 +12,7 @@
 			</div>
 
 		<% @allNews.each do |news| %>
-
-				<% if controller_name == "home" %>
-					<div class='col-md-4 news-teaser'>
-				<% else %>
-					<div class='col-md-12 news-teaser'>
-				<% end %>
-
-
-				<h3> <%= news.title %> </h3>
-				<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
-				<div>
-					<%= image_tag news.image.url(:thumb), class: 'news-thumb', align: 'left' %>
-					<p>
-						<%= truncate(news.body, length: 100, separator: '.') %>
-					</p>
-				</div>
-
-				<%# don't preserve :page in url if we're not linking from the news controller %>
-				<% if controller_name == "news" %>
-					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
-				<% else %>
-					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
-				<% end %>
-
-				<div>
-					<% if current_user.try(:admin?) %>
-						<%= link_to 'Edit', edit_news_path(news) %>
-						<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-					<% end %>
-				</div>
-
-			</div>
+			<%= render partial: "news/teaser", locals: { news: news }%>
 		<% end %>
 
 		<div class='col-md-12 news-page-link-wrapper'>

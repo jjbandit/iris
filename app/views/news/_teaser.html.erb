@@ -1,0 +1,31 @@
+				<% background_url = news.image.url(:teaser) %>
+				<% if controller_name == "home" %>
+					<% view_width = 'col-md-4' %>
+				<% else %>
+					<% view_width = 'col-md-12' %>
+				<% end %>
+
+				<div class='<%= view_width %> news-teaser' style='background-image:url("<%= background_url %>")' >
+
+				<h3> <%= news.title %> </h3>
+				<span> <%= news.created_at.strftime('%B %e, %Y') %> </span>
+
+				<p>
+					<%= truncate(news.body, length: 100, separator: '.') %>
+				</p>
+
+				<%# don't preserve :page in url if we're not linking from the news controller %>
+				<% if controller_name == "news" %>
+					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %>
+				<% else %>
+					<%= link_to 'Continue Reading..', news_path(news, anchor: 'news-article'), class: 'read-more' %>
+				<% end %>
+
+				<div>
+					<% if current_user.try(:admin?) %>
+						<%= link_to 'Edit', edit_news_path(news) %>
+						<%= link_to 'Remove', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+					<% end %>
+				</div>
+
+			</div>
