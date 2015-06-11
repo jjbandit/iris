@@ -17,7 +17,7 @@ module Spree
     end
 
 		def spree_current_user
-			 current_person
+			 current_user
 		end
 
     def spree_login_path
