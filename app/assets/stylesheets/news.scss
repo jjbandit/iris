@@ -3,18 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #news-index-wrapper {
-	display: inline-block;
+	/* display: inline-block; */
 
 	.news-teaser-wrapper {
-		background: no-repeat center;
+		background: no-repeat center content-box;
+		padding-top: 10px;
 
 		.news-teaser-content {
-			padding-left: 10px;
 
-			h3 {
-				padding: 3px 0 0 3px;
-				background: #ccc;
-				opacity: 0.7;
+			h4 {
+				margin-top: 0;
+
+				&.translucent {
+					padding: 6px 13px 6px 13px;
+					background: #ccc;
+					opacity: 0.85;
+				}
 			}
 		}
 	}

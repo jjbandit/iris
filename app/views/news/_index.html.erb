@@ -1,21 +1,23 @@
-<div id='news-index-wrapper'>
+<div class='row' id='news-index-wrapper'>
 	<h1>Recent News</h1>
-	<div id='news-index-content'>
-			<% if current_user.try(:admin?) %>
-				<div >
-					<%= link_to 'Create News', new_news_path %>
-				</div>
-			<% end %>
-
-			<div class='col-md-12 news-page-link-wrapper'>
-				<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link fa fa-ellipsis-h' %>
+	<div class='clearfix' id='news-index-content'>
+		<% if current_user.try(:admin?) %>
+			<div >
+				<%= link_to 'Create News', new_news_path %>
 			</div>
-
-		<% @allNews.each do |news| %>
-			<%= render partial: "news/teaser", locals: { news: news }%>
 		<% end %>
 
-		<div class='col-md-12 news-page-link-wrapper'>
+		<div class='col-xs-12 news-page-link-wrapper'>
+			<%= link_to_previous_page @allNews, 'Previous News', class: 'page-link fa fa-ellipsis-h' %>
+		</div>
+
+		<div class='col-xs-12'>
+			<% @allNews.each do |news| %>
+				<%= render partial: "news/teaser", locals: { news: news }%>
+			<% end %>
+		</div>
+
+		<div class='col-xs-12 news-page-link-wrapper'>
 			<%= link_to_next_page @allNews, 'More News', class: 'page-link fa fa-ellipsis-h'%>
 		</div>
 	</div>

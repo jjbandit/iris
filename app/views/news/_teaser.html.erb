@@ -1,20 +1,17 @@
 <% background_url = news.image.url(:teaser) %>
-<% controller_name == 'home' ? view_width = 'col-md-4' : view_width = 'col-md-12' %>
+<% controller_name == 'home' ? view_width = 'col-sm-4' : view_width = 'col-sm-12' %>
 
-<div class='news-teaser-wrapper <%= view_width %>' style='background-image:url("<%= background_url %>")' >
+<div class='news-teaser-wrapper col-xs-8 col-xs-offset-2 <%= view_width %> col-sm-offset-0' style='background-image:url("<%= background_url %>")' >
 	<div class='news-teaser-content'>
+
 		<%# don't preserve :page in url if we're not linking from the news controller %>
-		<% if controller_name == 'news' %>
-			<h3><%= link_to news.title, news_path(news, anchor: 'news-article', page: params[:page]), class: 'read-more' %> </h3>
-		<% else %>
-			<h3><%= link_to news.title, news_path(news, anchor: 'news-article'), class: 'read-more' %> </h3>
-		<% end %>
-		<span> <%= time_ago_in_words(news.created_at) %> ago</span>
+		<% controller_name == 'news' ? page = params[:page] :  page = '1' %>
+			<h4 class='translucent'><%= link_to news.title, news_path(news, anchor: 'news-article', page: page ), class: 'read-more' %> </h4>
+			<span> <%= time_ago_in_words(news.created_at) %> ago</span>
 
 		<p>
 			<%= truncate(news.body, length: 100, separator: '.') %>
 		</p>
-
 
 		<% if current_user.try(:admin?) %>
 			<div>

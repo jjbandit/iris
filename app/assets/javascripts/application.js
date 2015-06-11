@@ -15,5 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+//= require jquery-ui/effect.all
 
 //= require glidejs/dist/glide.js

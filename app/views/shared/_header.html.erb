@@ -1,19 +1,19 @@
 <div class='container' id='header'>
 <%# <%= spree.link_to_cart %1> %>
 	<ul class='col-md-12'>
-		<li class='logo col-md-2'>
+		<li class='logo col-xs-2'>
 			<a href='/'>
-				<img class='col-md-12' src=<%= image_path 'Iris_Logo_V2_Stacked_Web_GS-300x204.png' %> />
+				<img class='col-xs-12' src=<%= image_path 'Iris_Logo_V2_Stacked_Web_GS-300x204.png' %> />
 			</a>
 		</li>
-		<li class='col-md-2'> <a href='/products'> Products </a> </li>
-		<li class='col-md-2'> <a href='/corporate'> Corporate </a> </li>
-		<li class='col-md-2'> <%= link_to 'News', main_app.news_index_path %>  </li>
-		<li class='col-md-2'> <a href='/contact'> Contact </a> </li>
+		<li class='col-xs-2'> <a href='/products'> Products </a> </li>
+		<li class='col-xs-2'> <a href='/corporate'> Corporate </a> </li>
+		<li class='col-xs-2'> <%= link_to 'News', main_app.news_index_path %>  </li>
+		<li class='col-xs-2'> <a href='/contact'> Contact </a> </li>
 		<% if user_signed_in? %>
-			<li class='col-md-2'> <%= link_to 'Logout', main_app.destroy_user_session_path, method: :delete %> </li>
+			<li class='col-xs-2'> <%= link_to 'Logout', main_app.destroy_user_session_path, method: :delete %> </li>
 		<% else %>
-			<li class='col-md-2'> <%= link_to 'Login', main_app.new_user_session_path %> </li>
+			<li class='col-xs-2'> <%= link_to 'Login', main_app.new_user_session_path %> </li>
 		<% end %>
 	</ul>
 </div>
