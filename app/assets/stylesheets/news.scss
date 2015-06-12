@@ -10,15 +10,16 @@
 		padding-top: 10px;
 
 		.news-teaser-content {
+			height: 150px;
 
 			h4 {
 				margin-top: 0;
+			}
 
-				&.translucent {
-					padding: 6px 13px 6px 13px;
-					background: #ccc;
-					opacity: 0.85;
-				}
+			.translucent {
+				padding: 6px 13px 6px 13px;
+				background: #ccc;
+				opacity: 0.85;
 			}
 		}
 	}

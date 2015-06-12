@@ -6,12 +6,16 @@
 
 		<%# don't preserve :page in url if we're not linking from the news controller %>
 		<% controller_name == 'news' ? page = params[:page] :  page = '1' %>
-			<h4 class='translucent'><%= link_to news.title, news_path(news, anchor: 'news-article', page: page ), class: 'read-more' %> </h4>
+
+		<h4 class='translucent news-title'><%= link_to news.title, news_path(news, anchor: 'news-article', page: page ), class: 'read-more' %> </h4>
+
+		<div class='news-body translucent'>
 			<span> <%= time_ago_in_words(news.created_at) %> ago</span>
 
-		<p>
-			<%= truncate(news.body, length: 100, separator: '.') %>
-		</p>
+			<p>
+				<%= truncate(news.body, length: 100, separator: '.') %>
+			</p>
+		</div>
 
 		<% if current_user.try(:admin?) %>
 			<div>
