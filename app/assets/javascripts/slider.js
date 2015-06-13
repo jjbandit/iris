@@ -5,7 +5,9 @@ $(document).ready(function()
 		dots: true,
 		dotsEach: 1,
 		margin: 10,
-		autoPlay: true,
+		autoplay: true,
+		transition: 'fade',
+		autoplayTimeout: 5000,
 		loop: true,
 		items: 1
 		});

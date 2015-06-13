@@ -31,13 +31,10 @@ body {
 	}
 }
 
-#slider {
-	width: 100%;
-	margin: 3px;
-	height: auto;
 
-	.slide-image {
-			width: 100%;
+/* Fix Flickering issue in chrome */
+.owl-carousel {
+	.owl-item{
+		transform: translate3d(0,0,0);
 	}
-
 }
