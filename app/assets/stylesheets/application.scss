@@ -12,12 +12,14 @@
  *
  *= require_tree .
  *= require_self
- *= require glidejs/dist/css/glide
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+@import "owl.carousel";
+@import "owl.theme.default";
 
 body {
 	background: #eee;
@@ -28,3 +30,13 @@ body {
 	}
 }
 
+#slider {
+	width: 100%;
+	margin: 3px;
+	height: auto;
+
+	.slide-image {
+			width: 100%;
+	}
+
+}

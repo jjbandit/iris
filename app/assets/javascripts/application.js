@@ -17,5 +17,4 @@
 //= require_tree .
 //
 //= require jquery-ui/effect.all
-
-//= require glidejs/dist/glide.js
+//= require owl.carousel

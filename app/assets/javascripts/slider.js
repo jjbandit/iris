@@ -1,4 +1,10 @@
 $(document).ready(function()
 {
-	$('.glide').glide();
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 10,
+		nav: true,
+		items: 1,
+		});
+
 });
