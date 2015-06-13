@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Iris</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>Iris</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
 
-	<%= render 'shared/header' %>
+	<body>
+		<%= render 'shared/header' %>
 
-	<div class='main-content container'>
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<%= render "shared/slider" %>
 
-		<%= yield %>
+		<div class='main-content container'>
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
 
-		<%= render 'shared/footer' %>
+			<%= yield %>
 
-	</div>
-</body>
+			<%= render 'shared/footer' %>
+
+		</div>
+	</body>
 </html>

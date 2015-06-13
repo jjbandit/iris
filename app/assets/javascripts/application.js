@@ -17,4 +17,5 @@
 //= require_tree .
 //
 //= require jquery-ui/effect.all
-//= require owl.carousel
+//
+//= require owl-carousel2/dist/owl.carousel

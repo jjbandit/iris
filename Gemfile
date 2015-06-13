@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Slider
-gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
+# gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
 
 # awesome
 gem 'font-awesome-rails'

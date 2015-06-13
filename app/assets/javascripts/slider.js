@@ -1,10 +1,13 @@
 $(document).ready(function()
 {
 	$('.owl-carousel').owlCarousel({
-		loop: true,
-		margin: 10,
 		nav: true,
-		items: 1,
+		dots: true,
+		dotsEach: 1,
+		margin: 10,
+		autoPlay: true,
+		loop: true,
+		items: 1
 		});
 
 });

@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *
  *= require_tree .
  *= require_self
  */
@@ -18,8 +19,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-@import "owl.carousel";
-@import "owl.theme.default";
+@import 'owl-carousel2/dist/assets/owl.carousel';
+@import 'owl-carousel2/dist/assets/owl.theme.default';
 
 body {
 	background: #eee;
