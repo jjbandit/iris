@@ -5,6 +5,12 @@ set :application, 'iris'
 set :repo_url, 'git@github.com:jjbandit/iris.git'
 set :user, 'cap-user'
 
+set :rbenv_type, :user
+set :rbenv_ruby, '2.2.2'
+
+# Restrict cap-user sudo access
+set :passenger_restart_with_touch, true
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

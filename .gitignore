@@ -15,8 +15,9 @@
 # Gemfile.lock
 Gemfile.lock
 
-# Ignore public assets
-public/*
+# Ignore dev and user assets
+public/spree
+public/system
 
 # Bower packages can be reimported with rake bower:update
 vendor/assets/bower_components/
