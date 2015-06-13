@@ -333,6 +333,7 @@ DEPENDENCIES
   bower-rails
   byebug
   capistrano (~> 3.4.0)
+  capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.1.1)
   deface (= 1.0.1)
   devise
