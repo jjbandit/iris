@@ -6,16 +6,21 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: 'test@gmail.com', admin: true, password: 'password', password_confirmation: 'password')
 
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
-
-20.times do |i|
-	title_length = 2 + rand(9)
-	News.create(
-		title: LoremIpsum.w(title_length, format: :title_case),
-		body: LoremIpsum.random(paragraphs: 4, html: true),
-		image: File.open('app/assets/images/CustomsandBorderPatrolPredator.jpg')
-	);
+User.find_or_create_by(email: 'test@gmail.com') do |user|
+	user.admin = true,
+	user.password = 'password',
+	user.password_confirmation = 'password'
 end
+
+# Spree::Core::Engine.load_seed if defined?(Spree::Core)
+# Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+# 20.times do |i|
+# 	title_length = 2 + rand(9)
+# 	News.create(
+# 		title: LoremIpsum.w(title_length, format: :title_case),
+# 		body: LoremIpsum.random(paragraphs: 4, html: true),
+# 		image: File.open('app/assets/images/CustomsandBorderPatrolPredator.jpg')
+# 	);
+# end
