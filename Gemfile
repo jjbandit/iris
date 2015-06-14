@@ -19,7 +19,7 @@ gem 'deface', '1.0.1'
 gem 'kaminari'
 
 # twbs - depends on sass-rails and autoprefixer
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
 
 # Use SCSS for stylesheets

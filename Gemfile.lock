@@ -334,7 +334,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.4)
   bower-rails
   byebug
   capistrano (~> 3.4.0)

@@ -1,13 +1,8 @@
-
 #header {
-
-	overflow: hidden;
-	display: block;
-
-	li {
-		list-style: none;
-		line-height: 153px;
+	a.navbar-brand {
+		padding-top: 0;
+		img {
+			height: 69px;
+		}
 	}
-
 }
-

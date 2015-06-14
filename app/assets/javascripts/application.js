@@ -17,5 +17,6 @@
 //= require_tree .
 //
 //= require jquery-ui/effect.all
+//= require bootstrap-sprockets
 //
 //= require owl-carousel2/dist/owl.carousel

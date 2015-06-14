@@ -1,20 +1,40 @@
-<div class='container' id='header'>
-<%# <%= spree.link_to_cart %1> %>
-	<ul class='col-md-12'>
-		<li class='logo col-xs-2'>
-			<a href='/'>
-				<img class='col-xs-12' src=<%= image_path 'Iris_Logo_V2_Stacked_Web_GS-300x204.png' %> />
+<nav class='navbar navbar-default navbar-fixed-top'>
+	<div class='container' id='header'>
+	<%# <%= spree.link_to_cart %1> %>
+		<div class='navbar-header'>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class='navbar-brand' href='/'>
+				<img src=<%= image_path 'Iris_Logo_V2_Stacked_Web_GS-300x204.png' %> />
 			</a>
-		</li>
-		<li class='col-xs-2'> <a href='/products'> Products </a> </li>
-		<li class='col-xs-2'> <a href='/corporate'> Corporate </a> </li>
-		<li class='col-xs-2'> <%= link_to 'News', main_app.news_index_path %>  </li>
-		<li class='col-xs-2'> <a href='/contact'> Contact </a> </li>
-		<% if user_signed_in? %>
-			<li class='col-xs-2'> <%= link_to 'Logout', main_app.destroy_user_session_path, method: :delete %> </li>
-		<% else %>
-			<li class='col-xs-2'> <%= link_to 'Login', main_app.new_user_session_path %> </li>
-		<% end %>
-	</ul>
-</div>
+		</div>
 
+		<div class='collapse navbar-collapse'>
+			<ul class='nav navbar-nav'>
+				<li><a href='/products'><h4> Products </h4></a></li>
+				<li><a href='/corporate'><h4> Corporate </h4></a></li>
+				<li>
+					<%= link_to main_app.news_index_path do %>
+						<h4> News </h4>
+					<% end %>
+				</li>
+				<li><a href='/contact'><h4> Contact </h4></a> </li>
+					<% if user_signed_in? %>
+						<li><%= link_to main_app.destroy_user_session_path, method: :delete do %>
+							<h4> Logout </h4>
+						</li>
+						<% end %>
+					<% else %>
+						<li><%= link_to main_app.new_user_session_path do %>
+							<h4> Login </h4>
+						</li>
+						<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</nav>
