@@ -38,7 +38,7 @@
 			Iris.direction === 'previous' ? Iris.direction = 'up' : Iris.direction = 'down';
 			$( '#news-index-content' ).hide( 'slide', {direction: Iris.direction, }, 250 );
 
-			Turbolinks.visit(evt.target.href, { scroll: false});
+			Turbolinks.visit( evt.target.href, { scroll: false } );
 
 			// Set this here because turbolinks page:load event
 			// gets called an inconsistent number of times
@@ -63,7 +63,6 @@
 		}
 
 		var clearIndexHeight = function (selector, context) {
-			console.log(selector);
 			$(selector, context).css('height', '')
 		}
 

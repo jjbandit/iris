@@ -6,18 +6,26 @@
 	/* display: inline-block; */
 
 	.news-teaser-wrapper {
+		max-width: 450px;
 		background: no-repeat center content-box;
 		padding-top: 10px;
 
 		.news-teaser-content {
 			height: 150px;
+			margin: 10px;
 
-			h4 {
-				margin-top: 0;
+
+			.news-body,
+			.news-title {
+				p,
+				a > h4
+				{
+					padding: 6px 13px;
+					margin: 0;
+				}
 			}
 
 			.translucent {
-				padding: 6px 13px 6px 13px;
 				background: #ccc;
 				opacity: 0.85;
 			}
