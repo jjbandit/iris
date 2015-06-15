@@ -2,8 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.glyph {
-	text-align: center;
+.glyph-wrapper {
+	padding: 15px 0 0 0;
+
+	.title{
+		&:after {
+			content: '';
+			margin: 10px auto 0 auto;
+			text-align: center;
+			display:block;
+			width:140px;
+			height: 5px;
+			background: #aaa;
+		}
+	}
+	.glyph {
+		text-align: center;
+	}
 }
 
 img.news-thumb {
