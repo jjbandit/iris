@@ -1,5 +1,35 @@
 .owl-stage{
 	max-height:450px;
+
+	.item-desc {
+		text-align: center;
+		top: 10%;
+		width: 80%;
+		left: 10%;
+		height: 0;
+		position: absolute;
+		z-index: 1;
+
+		color: #eee;
+		text-shadow: 3px 3px 5px #333,
+								-1px -1px 3px #777;
+
+		.title {
+			font-size: 6em;
+			@media (max-width: 700px) {
+				font-size: 4em;
+				margin: 0;
+			}
+		}
+
+		.tagline {
+			font-size: 3em;
+			@media (max-width: 700px) {
+				font-size: 2em;
+			}
+		}
+
+	}
 }
 
 $control-height: 65px;

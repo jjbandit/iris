@@ -12,7 +12,7 @@ $(document).ready(function()
 		dotsContainer: '.myDots',
 		margin: 10,
 		autoplay: true,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 8000,
 		loop: true,
 		});
 
