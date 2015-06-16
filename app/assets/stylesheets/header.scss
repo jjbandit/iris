@@ -1,15 +1,38 @@
-#header {
+.navbar#header {
+
 	p {
 		margin: 0;
 		padding: 0;
-
 	}
 
-	a.navbar-brand {
-		padding-top: 0;
+	$navbar-height: 65px;
+	body {
+		padding-top: $navbar-height;
+	}
+	.navbar-brand {
+		line-height: $navbar-height;
+		height: $navbar-height;
+		padding: 0;
 
 		img {
-			height: 69px;
+			height: $navbar-height;
+			padding: 10px 0;
+		}
+	}
+
+	.navbar-nav {
+		padding: 0;
+
+		li a {
+			/* line-height: $navbar-height; */
+			/* height: $navbar-height; */
+			padding: 0 15px;
+
+			h4 {
+				line-height: $navbar-height;
+				margin: 0;
+				padding: 0 15px;
+			}
 		}
 	}
 }
