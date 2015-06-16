@@ -14,6 +14,7 @@ gem 'spree_backend', '3.0.1'
 gem 'spree_core', '3.0.1'
 gem 'spree_sample', '3.0.1'
 gem 'deface', '1.0.1'
+gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", :branch => "3-0-stable"
 
 # Pagination gem
 gem 'kaminari'

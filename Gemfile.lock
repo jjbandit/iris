@@ -5,6 +5,15 @@ GIT
     turbolinks (3.0.0)
       coffee-rails
 
+GIT
+  remote: git://github.com/spree/spree_active_shipping
+  revision: 37311c90ba9ad0012039dd91cd2993e19d19f024
+  branch: 3-0-stable
+  specs:
+    spree_active_shipping (3.0.0.beta)
+      active_shipping (~> 1.2.2)
+      spree_core (~> 3.0.0.beta)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,6 +36,14 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_shipping (1.2.2)
+      active_utils (~> 3.0.0)
+      activesupport (>= 3.2, < 5.0.0)
+      nokogiri (>= 1.6)
+      quantified (~> 1.0.1)
+    active_utils (3.0.0)
+      activesupport (>= 3.2)
+      i18n
     activejob (4.2.1)
       activesupport (= 4.2.1)
       globalid (>= 0.3.0)
@@ -185,6 +202,7 @@ GEM
     premailer-rails (1.8.2)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
+    quantified (1.0.1)
     rabl (0.9.4.pre1)
       activesupport (>= 2.3.14)
     rack (1.6.1)
@@ -356,6 +374,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  spree_active_shipping!
   spree_backend (= 3.0.1)
   spree_core (= 3.0.1)
   spree_frontend (= 3.0.1)
