@@ -1,7 +1,14 @@
 <div id='catalog'>
 	<div class='owl2'>
 	<% @products.each do |product| %>
-		<h1> <%= product.name %> </h1>
+		<% url = spree.product_url(product) %>
+		<div>
+			<%= link_to url do %>
+				<h3> <%= product.name %> </h3>
+				<%= image_tag product.master_images.first.attachment.url :large %>
+			<% end %>
+
+		</div>
 	<% end %>
 	</div>
 </div>
