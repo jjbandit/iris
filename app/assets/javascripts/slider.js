@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
 
-	$('.owl-carousel').owlCarousel({
+	$('.slider-carousel').owlCarousel({
 		items: 1,
 		nav: true,
 		navText: [
@@ -9,7 +9,8 @@ $(document).ready(function()
 			"<i class='fa fa-chevron-right fa-3x'></i>"
 		],
 		dots: true,
-		dotsContainer: '.myDots',
+		dotsContainer: '.sliderDots',
+		navContainer: '.sliderNav',
 		margin: 10,
 		autoplay: true,
 		autoplayTimeout: 8000,
@@ -18,20 +19,20 @@ $(document).ready(function()
 
 	// Position nav links
 	setTimeout( function () {
-		setHeight('.owl-prev');
-		setHeight('.owl-next');
+		setHeight('.sliderNav .owl-prev');
+		setHeight('.sliderNav .owl-next');
 	}, 50);
 
 	$(window).resize( function (evt) {
 		setTimeout( function () {
-			setHeight('.owl-prev');
-			setHeight('.owl-next');
+			setHeight('.sliderNav .owl-prev');
+			setHeight('.sliderNav .owl-next');
 		}, 250);
 	});
 
 });
 
 var setHeight = function (selector) {
-	var slideHeight = $('.owl-stage-outer').height();
-	$(selector).css('top', slideHeight/2 - 32.5);
+	var slideHeight = $('.slider-carousel').height();
+	$(selector).css('top', slideHeight/2 + 32.5);
 }

@@ -1,13 +1,14 @@
 $( document ).ready( function (evt) {
-	$('.navbar-nav li a').on('click', function (evt) {
+	$('.navbar-nav li.product-link a').on('click', function (evt) {
 		evt.preventDefault();
 		$('#catalog').toggle();
 	});
 
 	$('.owl2').owlCarousel({
-		items: 3,
+		items: 4,
 		nav: true,
-		navContainer: '.theNav',
+		navContainer: '.catalogNav',
+		dots: false,
 		margin: 10,
 		autoplay: true,
 		autoplayTimeout: 8000,
