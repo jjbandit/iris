@@ -1,6 +1,4 @@
 <nav class='navbar navbar-default navbar-fixed-top' id='header'>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 
 	<div class='container'>
 	<%# <%= spree.link_to_cart %1> %>
@@ -40,4 +38,10 @@
 			</ul>
 		</div>
 	</div>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<%= render "catalog/catalog" %>
+
 </nav>
