@@ -1,5 +1,4 @@
-$(document).ready(function()
-{
+$(document).ready(function(evt) {
 
 	$('.slider-carousel').owlCarousel({
 		items: 1,
@@ -14,8 +13,9 @@ $(document).ready(function()
 		margin: 10,
 		autoplay: true,
 		autoplayTimeout: 8000,
-		loop: true,
-		});
+		loop: true
+	});
+
 
 	// Position nav links
 	setTimeout( function () {
