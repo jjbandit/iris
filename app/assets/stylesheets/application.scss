@@ -27,9 +27,3 @@ body {
 }
 
 
-/* Fix Flickering issue in chrome */
-.owl-carousel {
-	.owl-item{
-		transform: translate3d(0,0,0);
-	}
-}
