@@ -28,12 +28,13 @@ body {
 		@media (max-width: 768px) {
 			position: static;
 		}
+		img {
+			height: $navbar-height;
+		}
 	}
-
 
 		img {
 			margin: 0 auto;
-			height: $navbar-height;
 			padding: 10px 0;
 		}
 

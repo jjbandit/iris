@@ -1,4 +1,6 @@
-$( document ).ready( function (evt) {
+$( document ).on( 'page:update', function (evt) {
+
+	$('#catalog').hide();
 
 	$('.navbar-nav li.product-link a').on('click', function (evt) {
 		evt.preventDefault();
