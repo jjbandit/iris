@@ -1,6 +1,6 @@
 Iris = {};
 
-$(document).on('page:load', function (evt) {
+$(document).on('page:update', function (evt) {
 
 	$('div.news-body').hide();
 
