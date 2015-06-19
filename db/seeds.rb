@@ -15,8 +15,8 @@ end
 
 # Spree::Product.create(name: 'Control Loading Yoke', description: 'This is the description', price: '2000.00', shipping_category_id: 1)
 
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+# Spree::Core::Engine.load_seed if defined?(Spree::Core)
+# Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 20.times do |i|
 	title_length = 2 + rand(9)

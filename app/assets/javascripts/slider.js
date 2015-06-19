@@ -11,6 +11,7 @@ $(document).ready(function(evt) {
 		dotsContainer: '.sliderDots',
 		navContainer: '.sliderNav',
 		margin: 10,
+		pauseOnHover: true,
 		autoplay: true,
 		autoplayTimeout: 8000,
 		loop: true
