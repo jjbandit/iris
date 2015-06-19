@@ -1,9 +1,16 @@
-$navbar-height: 65px;
+$navbar-height: 75px;
 body {
 	padding-top: $navbar-height;
 }
 
 .navbar#header {
+	opacity: 0.96;
+	.navbar-header {
+		height: $navbar-height;
+		.navbar-toggle {
+			margin-top: 20px;
+		}
+	}
 
 	p {
 		margin: 0;
@@ -13,20 +20,27 @@ body {
 	.navbar-brand {
 		line-height: $navbar-height;
 		height: $navbar-height;
-		padding: 0;
+		/* position: absolute; */
+		/* width: 30%; */
+		/* left: 35%; */
+		padding: 0 0 0 15px;
+
+		@media (max-width: 768px) {
+			position: static;
+		}
+	}
+
 
 		img {
+			margin: 0 auto;
 			height: $navbar-height;
 			padding: 10px 0;
 		}
-	}
 
 	.navbar-nav {
 		padding: 0;
 
 		li a {
-			/* line-height: $navbar-height; */
-			/* height: $navbar-height; */
 			padding: 0 15px;
 
 			h4 {

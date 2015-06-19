@@ -1,6 +1,6 @@
 Iris = {};
 
-$( document ).ready( function (evt) {
+$(document).on('page:load', function (evt) {
 
 	$('div.news-body').hide();
 
@@ -46,7 +46,7 @@ $( document ).ready( function (evt) {
 
 
 	$(document).on('page:load', function (evt) {
-		evt.preventDefault();
+		// evt.preventDefault();
 		// setIndexHeight('#news-index-wrapper');
 
 		// $( '#news-index-content' ).hide();

@@ -8,3 +8,8 @@
  *= require_self
  *= require_tree .
 */
+
+body#product-details,
+body#default {
+	padding-top: 100px;
+}

@@ -1,3 +1,16 @@
 #catalog {
 	display: none;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	text-align: center;
+	-webkit-background-color: transparent;
+	/* transition: visibility 0s linear, opacity 0.5s linear; */
+
+	img {
+		margin: 0 auto;
+		max-height: 100px;
+		max-width: 100px;
+	}
 }
+
+

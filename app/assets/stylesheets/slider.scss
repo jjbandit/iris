@@ -1,12 +1,19 @@
-.owl-stage{
-	max-height:450px;
+/* Fix Flickering issue in chrome */
+.owl-carousel {
+	.owl-item {
+		transform: translate3d(0,0,0);
+	}
+}
+
+.slider-carousel {
+	max-height: 525px;
+	overflow: hidden;
 
 	.item-desc {
 		text-align: center;
 		top: 10%;
-		width: 80%;
-		left: 10%;
-		height: 0;
+		width: 65%;
+		left: 17.5%;
 		position: absolute;
 		z-index: 1;
 
@@ -16,7 +23,8 @@
 
 		.title {
 			font-size: 6em;
-			@media (max-width: 700px) {
+
+			@media (max-width: 768px) {
 				font-size: 4em;
 				margin: 0;
 			}
@@ -24,17 +32,23 @@
 
 		.tagline {
 			font-size: 3em;
-			@media (max-width: 700px) {
+
+			@media (max-width: 768px) {
 				font-size: 2em;
 			}
 		}
-
 	}
+
+	.slide-image {
+		/* max-height:450px; */
+		opacity: 0.75;
+	}
+		background: black;
 }
 
 $control-height: 65px;
 .owl-controls {
-	height: 0;
+	/* height: 0; */
 
 	.owl-next,
 	.owl-prev {
@@ -72,9 +86,7 @@ $control-height: 65px;
 		position: relative;
 		top: -50px;
 		text-align: center;
-		z-index: 2;
-
-		.owl-dots {
+		z-index: 2; .owl-dots {
 			display: inline-block;
 			text-align: center;
 			border: 2px white solid;

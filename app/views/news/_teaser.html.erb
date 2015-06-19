@@ -1,15 +1,16 @@
 <% background_url = news.image.url(:teaser) %>
 <% controller_name == 'home' ? view_width = 'col-sm-4' : view_width = 'col-sm-12' %>
 
+<%# don't preserve :page in url if we're not linking from the news controller %>
+<% controller_name == 'news' ? page = params[:page] :  page = '1' %>
+
+<%= link_to news_path(news, anchor: 'news-article', page: page ) do %>
 <div class='news-teaser-wrapper col-xs-12 <%= view_width %>' style='background-image:url("<%= background_url %>")' >
 	<div class='news-teaser-content'>
 
-		<%# don't preserve :page in url if we're not linking from the news controller %>
-		<% controller_name == 'news' ? page = params[:page] :  page = '1' %>
 
-		<div class='translucent news-title'><%= link_to news_path(news, anchor: 'news-article', page: page ), class: 'clearfix read-more' do %>
+		<div class='translucent news-title'>
 			<h4> <%= news.title %> </h4>
-		<% end %>
 		</div>
 
 		<div class='news-body translucent'>
@@ -28,3 +29,4 @@
 		<% end %>
 	</div>
 </div>
+<% end %>
