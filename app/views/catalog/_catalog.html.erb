@@ -5,8 +5,8 @@
 		<div>
 			<%= link_to url do %>
 				<h3> <%= product.name %> </h3>
-				<% if defined? product.images.first %>
-					<%= image_tag product.images.first.attachment.url %>
+				<% if defined? product.master_images.first %>
+					<%= image_tag product.master_images.first.attachment.url %>
 				<% end %>
 			<% end %>
 
