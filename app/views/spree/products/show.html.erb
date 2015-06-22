@@ -1,12 +1,12 @@
 <% @body_id = 'product-details' %>
 
 <% cache [I18n.locale, current_currency, @product] do %>
-	<div class='col-md-12'>
+	<div class='row'>
 		<h1 class="product-title" itemprop="name"><%= @product.name %></h1>
 	</div>
 
 	<div data-hook="product_show" itemscope itemtype="https://schema.org/Product">
-		<div class="col-md-12" data-hook="product_left_part">
+		<div class="row" data-hook="product_left_part">
 
 			<div data-hook="product_left_part_wrap">
 				<div id="product-images" class='col-md-4' data-hook="product_images">
@@ -32,8 +32,12 @@
 		</div>
 	</div>
 
-	<div class='col-md-12'>
-		<div class='col-md-4'>
+	<div class='row'>
+		<%= render "shared/product_glyphs" %>
+	</div>
+
+	<div class='row product-bottom'>
+		<div class='col-md-5'>
 			<div data-hook="product_properties">
 				<%= render :partial => 'properties' %>
 			</div>
@@ -42,11 +46,9 @@
 				<%= render :partial => 'promotions' %>
 			</div>
 		</div>
-		<div class='col-md-8'>
 			<div id="cart-form" data-hook="cart_form">
 				<%= render :partial => 'cart_form' %>
 			</div>
-		</div>
 	</div>
 
 <% end %>
