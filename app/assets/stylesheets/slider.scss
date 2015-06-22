@@ -1,5 +1,6 @@
 /* Fix Flickering issue in chrome */
 .owl-carousel {
+	cursor: move;
 	.owl-item {
 		transform: translate3d(0,0,0);
 	}
@@ -52,12 +53,14 @@ $control-height: 65px;
 
 	.owl-next,
 	.owl-prev {
+		cursor: pointer;
 		opacity: 0.75;
+		color: #222;
 		margin: 0 15px;
 		height: $control-height;
 		width: $control-height;
 		border-radius: $control-height/3;
-		background: #eee;
+		background: transparent;
 		text-align: center;
 		position: absolute;
 		transition: opacity 0.25s ease;
