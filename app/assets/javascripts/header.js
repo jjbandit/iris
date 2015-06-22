@@ -8,13 +8,11 @@ $( document ).on( 'page:update', function (evt) {
 	});
 
 	$('.owl2').owlCarousel({
-		items: 2,
-		nav: true,
-		navContainer: '.catalogNav',
+		items: 1,
+		// nav: true,
+		// navContainer: '.catalog-nav',
 		dots: false,
 		margin: 10,
-		// autoplay: true,
-		// autoplayTimeout: 8000,
 		loop: true
 	});
 });

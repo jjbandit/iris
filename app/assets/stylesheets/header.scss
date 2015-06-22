@@ -1,10 +1,17 @@
 $navbar-height: 75px;
+
 body {
 	padding-top: $navbar-height;
 }
 
+#catalog {
+	position: absolute;
+	top: $navbar-height + 15px;
+}
+
 .navbar#header {
 	opacity: 0.96;
+
 	.navbar-header {
 		height: $navbar-height;
 		.navbar-toggle {

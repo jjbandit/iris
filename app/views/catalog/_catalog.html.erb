@@ -1,19 +1,21 @@
-<div id='catalog'>
-	<div class='owl2'>
-	<% @products.each do |product| %>
-		<% url = spree.product_url(product) %>
-		<div>
-			<%= link_to url do %>
-				<h3> <%= product.name %> </h3>
-				<% if product.master_images.count > 0 %>
-					<%= image_tag product.master_images.first.attachment.url %>
+<div>
+	<div class='container' id='catalog'>
+		<div class='owl2 row'>
+		<% @products.each do |product| %>
+			<% url = spree.product_url(product) %>
+			<div>
+				<%= link_to url do %>
+					<h3> <%= product.name %> </h3>
+					<% if product.master_images.count > 0 %>
+						<%= image_tag product.master_images.first.attachment.url %>
+					<% end %>
 				<% end %>
-			<% end %>
 
+			</div>
+		<% end %>
 		</div>
-	<% end %>
 	</div>
-</div>
 
-<div class='owl-controls theNav'>
+	<div class='owl-controls catalog-nav'>
+	</div>
 </div>
