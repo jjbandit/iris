@@ -255,6 +255,8 @@ GEM
       rdoc (~> 4.0)
     select2-rails (3.5.9.1)
       thor (~> 0.14)
+    skrollr-rails (0.6.29)
+      rails (>= 3.1.0)
     spree_api (3.0.1)
       rabl (~> 0.9.4.pre1)
       spree_core (= 3.0.1)
@@ -374,6 +376,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  skrollr-rails
   spree_active_shipping!
   spree_backend (= 3.0.1)
   spree_core (= 3.0.1)

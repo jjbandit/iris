@@ -20,5 +20,8 @@
 //= require bootstrap-sprockets
 //
 //= require owl-carousel2/dist/owl.carousel
+//= require skrollr
+//= require skrollr.menu
+//= require skrollr.stylesheets
 //
 //= require turbolinks

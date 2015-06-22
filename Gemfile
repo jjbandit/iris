@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Slider
 # gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
 
+# Scroll lib bundled for asset pipeline
+gem 'skrollr-rails'
+
 # awesome
 gem 'font-awesome-rails'
 
