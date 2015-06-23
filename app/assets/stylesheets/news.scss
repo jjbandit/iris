@@ -4,10 +4,16 @@
 
 #news {
 
+	.news-teaser-link-wrapper {
+		display: table;
+		width: 100%;
+	}
+
 	.news-teaser-wrapper {
 		max-width: 450px;
 		background: no-repeat center content-box;
 		padding-top: 10px;
+		margin: 0 auto;
 
 		.news-teaser-content {
 			height: 150px;

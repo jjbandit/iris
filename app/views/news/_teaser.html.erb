@@ -4,8 +4,8 @@
 <%# don't preserve :page in url if we're not linking from the news controller %>
 <% controller_name == 'news' ? page = params[:page] :  page = '1' %>
 
-<%= link_to news_path(news, page: page ) do %>
-<div class='news-teaser-wrapper col-xs-12 <%= view_width %>' style='background-image:url("<%= background_url %>")' >
+<%= link_to news_path(news, page: page ), class: view_width do %>
+<div class='news-teaser-wrapper' style='background-image:url("<%= background_url %>")' >
 	<div class='news-teaser-content'>
 
 

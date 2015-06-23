@@ -5,9 +5,9 @@ $navbar-height: 75px;
 }
 
 .navbar#nav-menu {
-	margin-top: -$navbar-height;
 	margin-bottom: 0;
 	border: 0;
+	position: fixed;
 	top: 0;
 
 	height: $navbar-height;
@@ -15,6 +15,10 @@ $navbar-height: 75px;
 
 	opacity: 0.96;
 	z-index: 1;
+
+	&.offset {
+		margin-top: -$navbar-height;
+	}
 
 	.navbar-header {
 		height: $navbar-height;
