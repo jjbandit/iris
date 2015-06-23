@@ -1,4 +1,4 @@
-<nav class='navbar navbar-default navbar-fixed-top' id='header'>
+<nav class='navbar navbar-default' id='nav-menu'>
 
 	<div class='container'>
 	<%# <%= spree.link_to_cart %1> %>
@@ -16,14 +16,10 @@
 
 		<div class='collapse navbar-collapse'>
 			<ul class='nav navbar-nav'>
-				<li class='product-link'><a href='/products'><h4> Products </h4></a></li>
-				<li class='corporate-link'><a href='/corporate'><h4> Overview </h4></a></li>
-				<li class='news-link' >
-					<%= link_to main_app.news_index_path do %>
-						<h4> News </h4>
-					<% end %>
-				</li>
-				<li class='contact-link'><a href='/contact'><h4> Contact </h4></a> </li>
+				<li class='corporate-link'><a href='/#overview'><h4> Overview </h4></a></li>
+				<li class='product-link'><a href='/#products'><h4> Products </h4></a></li>
+				<li class='news-link'><a href='/#news'> <h4> News </h4></a></li>
+				<li class='contact-link'><a href='/#contact'><h4> Contact </h4></a> </li>
 				<li class='log-link'>
 					<% if user_signed_in? %>
 						<%= link_to main_app.destroy_user_session_path, method: :delete do %>
