@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <%= render 'shared/nav_menu' %>
 
-<div class='main-content container'>
+<div class='main-content container' id='home-index'>
 	<div class='row nav-anchor' id='overview'>
 
 		<%# <h2 class='mission'> IRIS Dynamics provides high precision motion control systems enabling the remote operation of aerial, marine and land vehicles. </h2> %>
@@ -11,15 +11,29 @@
 	</div>
 	<div class='row nav-anchor' id='our-tech'>
 		<h1 class='squid'>Our Technology</h1>
-		<p>The Iris Dynamics Ltd. Linear Actuator establishes a new class of variable force electromagnetic linear motion control systems.
-		It was developed initially for use in high fidelity control loading applications, but has other applications in automotive, industrial, aerospace, marine, medical and defence.
-		It is a mechanically simple design, which translates to reduced costs, higher reliability and operation in harsh environments. </p>
+		<div class='col-md-6'>
+			<span>
+				<%= image_tag 'iris-tech-1.jpg', class: 'tech-image' %>
+			</span>
+			<span class='desc'>
+				The Iris Dynamics Ltd. Linear Actuator establishes a new class of variable force electromagnetic linear motion control systems.
+				It was developed initially for use in high fidelity control loading applications, but has other applications in automotive, industrial, aerospace, marine, medical and defence.
+				It is a mechanically simple design, which translates to reduced costs, higher reliability and operation in harsh environments.
+			</span>
+		</div>
 
-		<p>The device consists of an array of coils and a magnetic shaft which passes through the center of the array.
-		Power to the coil array is continuously modulated via a drive controller that takes serial commands from an external port and
-		adjusts the magnetic field strength and polarity as necessary. Interaction between the magnetic fields results in forces and movement of the shaft.
-		The technology has the potential to substantially reduce the construction costs and increase the reliability of many motion control systems and other
-		applications requiring precision linear actuators. </p>
+		<div class='col-md-6'>
+			<span>
+				<%= image_tag 'iris-tech-2.jpg', class: 'tech-image' %>
+			</span>
+			<span class='desc'>
+				The device consists of an array of coils and a magnetic shaft which passes through the center of the array.
+				Power to the coil array is continuously modulated via a drive controller that takes serial commands from an external port and
+				adjusts the magnetic field strength and polarity as necessary. Interaction between the magnetic fields results in forces and movement of the shaft.
+				The technology has the potential to substantially reduce the construction costs and increase the reliability of many motion control systems and other
+				applications requiring precision linear actuators.
+			</span>
+		</div>
 	</div>
 
 		<%= render "news/index" %>

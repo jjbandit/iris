@@ -30,12 +30,12 @@ body {
 }
 
 .nav-anchor {
-	margin-top: -75px;
+	margin-top: -200px;
 
 	&:before {
 		content: '';
 		display: block;
-		height: 75px;
+		height: 200px;
 	}
 }
 

@@ -2,60 +2,79 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.mission {
-	margin: 35px 0;
-	text-align: center;
-}
+#home-index {
+	.row {
+		margin: 150px auto;
+	}
+	.mission {
+		margin: 35px 0;
+		text-align: center;
+	}
 
-.glyph-wrapper {
-	padding: 15px 0 0 0;
+	.glyph-wrapper {
+		padding: 15px 0 0 0;
 
-	.title{
-		&:after {
-			content: '';
-			margin: 10px auto 0 auto;
+		.title{
+			&:after {
+				content: '';
+				margin: 10px auto 0 auto;
+				text-align: center;
+				display:block;
+				width:140px;
+				height: 5px;
+				background: #aaa;
+			}
+		}
+		.glyph {
+			padding-top: 25px;
 			text-align: center;
-			display:block;
-			width:140px;
-			height: 5px;
-			background: #aaa;
+			p {
+				text-align: left;
+			}
 		}
 	}
-	.glyph {
-		padding-top: 25px;
-		text-align: center;
-		p {
-			text-align: left;
+
+	img.news-thumb {
+		margin: 0 7px 0 0;
+	}
+
+	#our-tech {
+		img.tech-image {
+			float: right;
+			padding: 10px 10px 0 10px;
+			width: 270px;
+			height: 170px;
+		}
+
+		.desc {
+			font-size: 1.22em;
+			line-height: 1.5em;
 		}
 	}
-}
 
-img.news-thumb {
-	margin: 0 7px 0 0;
-}
+	.page-link {
+		&:link {
+			font-size: 16px;
+			text-align: center;
+		}
 
-.page-link {
-	&:link {
-		font-size: 16px;
+		&:before {
+		border: none;
+		font-size: 25px;
+		display: block;
+		margin: 0 auto -38px auto;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: none;
+		}
+	}
+
+	.news-page-link-wrapper {
+		padding: 10px 0;
+		width: 100%;
 		text-align: center;
 	}
-
-	&:before {
-	border: none;
-	font-size: 25px;
-	display: block;
-	margin: 0 auto -38px auto;
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		text-decoration: none;
-	}
-}
-
-.news-page-link-wrapper {
-	padding: 10px 0;
-	width: 100%;
-	text-align: center;
 }
