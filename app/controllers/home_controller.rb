@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  def index
+	def index
 		@allNews = News.order('created_at DESC').page(params[:page]).per(3)
-  end
+	end
 
 	def corporate
 	end

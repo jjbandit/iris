@@ -26,6 +26,27 @@ body {
 	background-image:url("/images/webtreats_metal_4-1024px-grey.jpg");
 	/* background-image:url("/images/webtreats_metal_4-512px.jpg"); */
 	/* background: #eee; */
+	height: 5000px;
 }
 
+.nav-anchor {
+	margin-top: -75px;
 
+	&:before {
+		content: '';
+		display: block;
+		height: 75px;
+	}
+}
+
+.squid {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 32.5px;
+		background-size: cover;
+		width: 30px;
+		margin-right: 15px;
+		background-image: url(image_path('Iris_Logo_V2_Plain_Web_Grey.png'));
+	}
+}

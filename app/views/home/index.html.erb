@@ -2,14 +2,42 @@
 <%= render 'shared/nav_menu' %>
 
 <div class='main-content container'>
-	<div class='col-md-12' id='overview'>
+	<div class='row nav-anchor' id='overview'>
 
 		<%# <h2 class='mission'> IRIS Dynamics provides high precision motion control systems enabling the remote operation of aerial, marine and land vehicles. </h2> %>
-		<h2 class='mission'> Human-Feedback Control Systems for Remote Operation of Aviation, Drones, Robotics, Marine and Land Vehicles.</h2>
+		<%# <h2 class='mission'> Human-Feedback Control Systems for Remote Operation of Aviation, Drones, Robotics, Marine and Land Vehicles.</h2> %>
 		<%# <h2 class='mission'> Iris has developed a innovative control system ideally suited for use in remote drone and robotic applications. </h2> %>
+
+	</div>
+	<div class='row nav-anchor' id='our-tech'>
+		<h1 class='squid'>Our Technology</h1>
+	</div>
 
 		<%= render "news/index" %>
 
-		<%= render "shared/home_glyphs" %>
+		<div class='row'>
+			<div class='col-md-6 nav-anchor' id='products'>
+				<h1 class='squid'>Products</h1>
+				<%= render 'shared/catalog' %>
+			</div>
+			<div class='col-md-6'>
+				<h1 class='squid'>Services</h1>
+			</div>
+		</div>
+
+		<div class='row nav-anchor' id='about'>
+			<h1 class='squid'>About</h1>
+			<div class='col-md-6'>
+				<h2>Directors</h2>
+			</div>
+			<div class='col-md-6'>
+				<h2>Advisors</h2>
+			</div>
+			<div class='col-xs-12'>
+				<h2> Partners </h2>
+			</div>
+		</div>
+
+		<%# <%= render "shared/home_glyphs" %1> %>
 	</div>
 </div>
