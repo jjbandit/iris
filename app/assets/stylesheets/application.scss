@@ -29,13 +29,12 @@ body {
 	height: 5000px;
 }
 
-.nav-anchor {
-	margin-top: -200px;
+.row-wrapper {
+	display: table;
 
-	&:before {
-		content: '';
-		display: block;
-		height: 200px;
+	.row {
+		display: table-cell;
+		vertical-align: middle;
 	}
 }
 

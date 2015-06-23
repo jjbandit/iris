@@ -1,5 +1,15 @@
 $navbar-height: 75px;
 
+.nav-anchor {
+	margin-top: -75px;
+
+	&:before {
+		content: '';
+		display: block;
+		height: 75px;
+	}
+}
+
 .head-image {
 	margin-bottom: $navbar-height;
 }

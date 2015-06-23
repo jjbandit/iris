@@ -25,3 +25,12 @@
 //= require skrollr.stylesheets
 //
 //= require turbolinks
+
+$(document).on( 'page:change', function (evt) {
+
+	var viewportHeight = $(window).height();
+	var navHeight = $('#nav-menu').height();
+	var secHeight = viewportHeight - navHeight;
+
+	$('.row').css('height', secHeight );
+});
