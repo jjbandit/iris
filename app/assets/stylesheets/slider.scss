@@ -1,39 +1,3 @@
-.head-image {
-	img {
-		width: 100%;
-		/* max-height: 450px; */
-	}
-}
-.item-desc {
-	text-align: center;
-	top: 10%;
-	width: 65%;
-	left: 17.5%;
-	position: absolute;
-	z-index: 1;
-
-	color: #eee;
-	text-shadow: 3px 3px 5px #333,
-							-1px -1px 3px #777;
-
-	.title {
-		font-size: 6em;
-
-		@media (max-width: 768px) {
-			font-size: 4em;
-			margin: 0;
-		}
-	}
-
-	.tagline {
-		font-size: 3em;
-
-		@media (max-width: 768px) {
-			font-size: 2em;
-		}
-	}
-}
-
 /* Fix flickering in Chrome */
 /* .owl-item { */
 /* 	transform: translate3d(0,0,0); */
