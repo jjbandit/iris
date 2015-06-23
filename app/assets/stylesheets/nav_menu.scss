@@ -1,10 +1,21 @@
 $navbar-height: 75px;
 
+.head-image {
+	margin-bottom: $navbar-height;
+}
+
 .navbar#nav-menu {
+	border: 0;
+	margin: 0;
+	margin-top: -$navbar-height;
+	height: $navbar-height;
+
 	opacity: 0.96;
+	z-index: 1;
 
 	.navbar-header {
 		height: $navbar-height;
+
 		.navbar-toggle {
 			margin-top: 20px;
 		}
