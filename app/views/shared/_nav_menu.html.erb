@@ -1,9 +1,4 @@
-<nav class='navbar navbar-default' id='nav-menu'
-	data-0='position: static;'
-	data-top-top='position: fixed; top: 75px; width: 100%;'
-	data-edge-strategy='set'
-	data-target="#nav-menu"
->
+<nav class='navbar navbar-default' id='nav-menu'>
 
 	<div class='container'>
 	<%# <%= spree.link_to_cart %1> %>
@@ -21,9 +16,9 @@
 
 		<div class='collapse navbar-collapse'>
 			<ul class='nav navbar-nav'>
-				<li class='corporate-link'><a href='/#overview'><h4> Overview </h4></a></li>
-				<li class='product-link'><a href='/#products'><h4> Products </h4></a></li>
-				<li class='news-link'><a href='/#news'> <h4> News </h4></a></li>
+				<li class='corporate-link'><a href='/#overview' data-menu-offset='-75'><h4> Overview </h4></a></li>
+				<li class='product-link'><a href='/#products' data-menu-top='-75'><h4> Products </h4></a></li>
+				<li class='news-link'><a href='/#news' data-menu-top='-75'> <h4> News </h4></a></li>
 				<li class='contact-link'><a href='/#contact'><h4> Contact </h4></a> </li>
 				<li class='log-link'>
 					<% if user_signed_in? %>

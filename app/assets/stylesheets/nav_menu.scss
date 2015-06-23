@@ -1,14 +1,21 @@
 $navbar-height: 75px;
 
+body {
+	height: 2000px;
+}
+
 .head-image {
 	margin-bottom: $navbar-height;
 }
 
 .navbar#nav-menu {
-	border: 0;
-	margin: 0;
 	margin-top: -$navbar-height;
+	margin-bottom: 0;
+	border: 0;
+	top: 0;
+
 	height: $navbar-height;
+	width: 100%;
 
 	opacity: 0.96;
 	z-index: 1;
