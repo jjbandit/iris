@@ -1,13 +1,11 @@
-<div>
-	<% @products.each do |product| %>
-		<% url = spree.product_url(product) %>
-		<div>
-			<%= link_to url do %>
-				<h3> <%= product.name %> </h3>
-				<% if product.master_images.count > 0 %>
-					<%= image_tag product.master_images.first.attachment.url %>
-				<% end %>
+<% @products.each do |product| %>
+	<% url = spree.product_url(product) %>
+	<div>
+		<%= link_to url do %>
+			<h3> <%= product.name %> </h3>
+			<% if product.master_images.count > 0 %>
+				<%= image_tag product.master_images.first.attachment.url %>
 			<% end %>
-		</div>
-	<% end %>
-</div>
+		<% end %>
+	</div>
+<% end %>

@@ -1,11 +1,17 @@
-#products {
-	background: #f8f8f8;
+#products-services {
+	text-align: center;
 
+	.products {
 
-	img {
-		margin: 0 auto;
-		max-height: 250px;
-		max-width: 250px;
+		a {
+			display: block;
+
+			img {
+				margin: 0 auto;
+				max-height: 250px;
+				max-width: 250px;
+			}
+		}
 	}
 }
 

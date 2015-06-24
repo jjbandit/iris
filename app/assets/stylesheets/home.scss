@@ -7,11 +7,30 @@
 		margin: 35px 0;
 		text-align: center;
 	}
+
+	section {
+		/* box-shadow: -15px 0 10px 9px #555; */
+		border-top: 2px solid #222;
+
+		&.even {
+			/* background-image:url(image_path('webtreats_metal_4-1024px-dark.jpg')); */
+			background: #ccc;
+		}
+		&.odd {
+			background: #eee;
+		}
+	}
+
 	.row-wrapper {
 
 		.row {
 			position: relative;
 			top: 15%;
+
+			.desc {
+				font-size: 1.22em;
+				line-height: 1.5em;
+			}
 		}
 	}
 
@@ -48,11 +67,6 @@
 			padding: 10px 10px 0 10px;
 			width: 270px;
 			height: 170px;
-		}
-
-		.desc {
-			font-size: 1.22em;
-			line-height: 1.5em;
 		}
 	}
 

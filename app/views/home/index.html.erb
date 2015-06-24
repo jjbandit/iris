@@ -1,91 +1,122 @@
 <%= render "shared/header" %>
 <%= render 'shared/nav_menu' %>
 
-<div class='main-content container' id='home-index'>
-	<div class='row-wrapper nav-anchor' id='overview'>
-		<div class='row'>
+<div class='main-content' id='home-index'>
+	<section class='odd'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='overview'>
+				<div class='row'>
 
-			<h1 class='squid'>Linear Control Loading Redifined</h1>
-			<p>
-				Control Loading is a growing requirement for modern commercial flight training.  In the simplest terms, it provides a representation of
-				the actual control feel of real aircraft controls while in a simulated environment.  The historic challenge has been the cost of very complex
-				and expensive drive systems.  Iris Dynamics' control loading technology is based on a proprietary non-contact linear induction drive.
-				This has substantially lowered cost, increased reliability and smoother feel compared to competing technologies and products.
-			</p>
+					<h1 class='squid'>Linear Control Loading Redifined</h1>
+					<span class='desc'>
+						Control Loading is a growing requirement for modern commercial flight training.  In the simplest terms, it provides a representation of
+						the actual control feel of real aircraft controls while in a simulated environment.  The historic challenge has been the cost of very complex
+						and expensive drive systems.  Iris Dynamics' control loading technology is based on a proprietary non-contact linear induction drive.
+						This has substantially lowered cost, increased reliability and smoother feel compared to competing technologies and products.
+					</span>
 
-			<%# <h2 class='mission'> IRIS Dynamics provides high precision motion control systems enabling the remote operation of aerial, marine and land vehicles. </h2> %>
-			<%# <h2 class='mission'> Human-Feedback Control Systems for Remote Operation of Aviation, Drones, Robotics, Marine and Land Vehicles.</h2> %>
-			<%# <h2 class='mission'> Iris has developed a innovative control system ideally suited for use in remote drone and robotic applications. </h2> %>
+					<%# <h2 class='mission'> IRIS Dynamics provides high precision motion control systems enabling the remote operation of aerial, marine and land vehicles. </h2> %>
+					<%# <h2 class='mission'> Human-Feedback Control Systems for Remote Operation of Aviation, Drones, Robotics, Marine and Land Vehicles.</h2> %>
+					<%# <h2 class='mission'> Iris has developed a innovative control system ideally suited for use in remote drone and robotic applications. </h2> %>
 
-		</div>
-	</div>
-
-	<div class='row-wrapper nav-anchor' id='our-tech'>
-		<div class='row'>
-			<h1 class='squid'>Our Technology</h1>
-			<div class='col-md-6'>
-				<span>
-					<%= image_tag 'iris-tech-1.jpg', class: 'tech-image' %>
-				</span>
-				<span class='desc'>
-					The Iris Dynamics Ltd. Linear Actuator establishes a new class of variable force electromagnetic linear motion control systems.
-					It was developed initially for use in high fidelity control loading applications, but has other applications in automotive, industrial, aerospace, marine, medical and defence.
-					It is a mechanically simple design, which translates to reduced costs, higher reliability and operation in harsh environments.
-				</span>
-			</div>
-
-			<div class='col-md-6'>
-				<span>
-					<%= image_tag 'iris-tech-2.jpg', class: 'tech-image' %>
-				</span>
-				<span class='desc'>
-					The device consists of an array of coils and a magnetic shaft which passes through the center of the array.
-					Power to the coil array is continuously modulated via a drive controller that takes serial commands from an external port and
-					adjusts the magnetic field strength and polarity as necessary. Interaction between the magnetic fields results in forces and movement of the shaft.
-					The technology has the potential to substantially reduce the construction costs and increase the reliability of many motion control systems and other
-					applications requiring precision linear actuators.
-				</span>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class='row-wrapper nav-anchor' id='news'>
-		<%= render "news/index" %>
-	</div>
 
-	<div class='row-wrapper nav-anchor' id='products'>
-		<div class='row'>
-			<div class='col-md-6'>
-				<h1 class='squid'>Products</h1>
-				<%= render 'shared/catalog' %>
-			</div>
-			<div class='col-md-6'>
-				<h1 class='squid'>Services</h1>
+	<section class='even'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='our-tech'>
+				<div class='row'>
+					<h1 class='squid'>Our Technology</h1>
+					<div class='col-md-6'>
+						<span>
+							<%= image_tag 'iris-tech-1.jpg', class: 'tech-image' %>
+						</span>
+						<span class='desc'>
+							The Iris Dynamics Ltd. Linear Actuator establishes a new class of variable force electromagnetic linear motion control systems.
+							It was developed initially for use in high fidelity control loading applications, but has other applications in automotive, industrial, aerospace, marine, medical and defence.
+							It is a mechanically simple design, which translates to reduced costs, higher reliability and operation in harsh environments.
+						</span>
+					</div>
+
+					<div class='col-md-6'>
+						<span>
+							<%= image_tag 'iris-tech-2.jpg', class: 'tech-image' %>
+						</span>
+						<span class='desc'>
+							The device consists of an array of coils and a magnetic shaft which passes through the center of the array.
+							Power to the coil array is continuously modulated via a drive controller that takes serial commands from an external port and
+							adjusts the magnetic field strength and polarity as necessary. Interaction between the magnetic fields results in forces and movement of the shaft.
+							The technology has the potential to substantially reduce the construction costs and increase the reliability of many motion control systems and other
+							applications requiring precision linear actuators.
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class='row-wrapper nav-anchor' id='about'>
-		<div class='row'>
-			<h1 class='squid'>About</h1>
-			<div class='col-md-6'>
-				<h2>Directors</h2>
-			</div>
-			<div class='col-md-6'>
-				<h2>Advisors</h2>
-			</div>
-			<div class='col-xs-12'>
-				<h2> Partners </h2>
+	<section class='odd'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='news'>
+				<%= render "news/index" %>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<section class='even'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='products-services'>
+				<div class='row'>
+					<div class='col-md-6 products'>
+						<h1 class='squid'>Products</h1>
+						<%= render 'shared/catalog' %>
+					</div>
+					<div class='col-md-6'>
+						<h1 class='squid'>Services</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class='odd'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='about'>
+				<div class='row'>
+					<h1 class='squid'>About</h1>
+					<div class='col-md-6'>
+						<h2>Directors</h2>
+						<ul>
+							<li>CEO - Vern</li>
+							<li>CFO - Garry Garritan</li>
+							<li>CTO - Patrick </li>
+						</ul>
+
+					</div>
+					<div class='col-md-6'>
+						<h2>Advisors</h2>
+					</div>
+					<div class='col-xs-12'>
+						<h2> Partners </h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 		<%# <%= render "shared/home_glyphs" %1> %>
 
-	<div class='row-wrapper nav-anchor' id='contact'>
-		<div class='row'>
-			<h1 class='squid'>Contact</h1>
+	<section class='even'>
+		<div class='container'>
+			<div class='row-wrapper nav-anchor' id='contact'>
+				<div class='row'>
+					<h1 class='squid'>Contact</h1>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 
 </div>
