@@ -3,15 +3,39 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #home-index {
+
 	.mission {
 		margin: 35px 0;
 		text-align: center;
 	}
 
 	section {
-		/* box-shadow: -15px 0 10px 9px #555; */
 		border-top: 2px solid #222;
 
+		/* Offset content down */
+		.row {
+			position: relative;
+			top: 15%;
+
+			/* Less for mobile */
+			@media (max-width: 768px) {
+				top: 5%;
+			}
+
+		/* And make the descriptions nice */
+			.desc {
+				font-size: 1.22em;
+				line-height: 1.5em;
+			}
+		}
+
+		img {
+			display: block;
+			max-height: 400px;
+			margin: 0 auto;
+		}
+
+		/* Stripes */
 		&.even {
 			/* background-image:url(image_path('webtreats_metal_4-1024px-dark.jpg')); */
 			background: #ccc;
@@ -19,80 +43,48 @@
 		&.odd {
 			background: #eee;
 		}
-	}
 
-	.row-wrapper {
+		#overview {
+			h1 {
+				margin-top: 0;
+			}
+		}
 
-		.row {
-			position: relative;
-			top: 15%;
-
-			.desc {
-				font-size: 1.22em;
-				line-height: 1.5em;
+		#our-tech {
+			img.tech-image {
+				float: right;
+				padding: 10px 10px 0 10px;
+				width: 270px;
+				height: 170px;
+			}
+		}
+		#news {
+			img.news-thumb {
+				margin: 0 7px 0 0;
 			}
 		}
 	}
 
-	.glyph-wrapper {
-		padding: 15px 0 0 0;
+	/* .glyph-wrapper { */
+	/* 	padding: 15px 0 0 0; */
 
-		.title{
-			&:after {
-				content: '';
-				margin: 10px auto 0 auto;
-				text-align: center;
-				display:block;
-				width:140px;
-				height: 5px;
-				background: #aaa;
-			}
-		}
-		.glyph {
-			padding-top: 25px;
-			text-align: center;
-			p {
-				text-align: left;
-			}
-		}
-	}
-
-	img.news-thumb {
-		margin: 0 7px 0 0;
-	}
-
-	#our-tech {
-		img.tech-image {
-			float: right;
-			padding: 10px 10px 0 10px;
-			width: 270px;
-			height: 170px;
-		}
-	}
-
-	.page-link {
-		&:link {
-			font-size: 16px;
-			text-align: center;
-		}
-
-		&:before {
-		border: none;
-		font-size: 25px;
-		display: block;
-		margin: 0 auto -38px auto;
-		}
-
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: none;
-		}
-	}
-
-	.news-page-link-wrapper {
-		padding: 10px 0;
-		width: 100%;
-		text-align: center;
-	}
+	/* 	.title{ */
+	/* 		&:after { */
+	/* 			content: ''; */
+	/* 			margin: 10px auto 0 auto; */
+	/* 			text-align: center; */
+	/* 			display:block; */
+	/* 			width:140px; */
+	/* 			height: 5px; */
+	/* 			background: #aaa; */
+	/* 		} */
+	/* 	} */
+	/* 	.glyph { */
+	/* 		padding-top: 25px; */
+	/* 		text-align: center; */
+	/* 		p { */
+	/* 			text-align: left; */
+	/* 		} */
+	/* 	} */
+	/* } */
 }
