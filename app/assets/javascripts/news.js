@@ -4,33 +4,29 @@ $(document).on('page:update', function (evt) {
 
 	$('div.news-body').hide();
 
-	var indexHeight;
+	var height;
 
 	$('div.news-teaser-content').on('mouseenter', function (evt) {
-		setIndexHeight(evt.currentTarget);
 		var self = this;
 		$('.news-title', this ).stop(true, true).hide('slide', {direction: 'up'}, 150).queue( function () {
 			$('.news-body', self ).stop(true, true).show('slide', {direction: 'up'}, 150);
 			$.dequeue(this);
 		});
-		clearIndexHeight(evt.currentTarget);
 	});
 
 	$('div.news-teaser-content').on('mouseleave', function (evt) {
-		setIndexHeight(evt.currentTarget);
 		var self = this;
 		$('.news-body', this ).stop(true, true).hide('slide', {direction: 'up'}, 150).queue( function () {
 			$('.news-title', self ).stop(true, true).show('slide', {direction: 'up'}, 150);
 			$.dequeue(this);
 		});
-		clearIndexHeight(evt.currentTarget);
 	});
 
 	// Ajax request more news stories, don't scroll to top of page on reload
 
 	$( 'a.page-link' ).on( 'click' , function (evt) {
 		// evt.preventDefault();
-		// setIndexHeight('#news-index-wrapper');
+		// setHeight('#news-index-wrapper');
 
 		// // Make the animation scroll toward the link the user clicks
 		// Iris.direction = $(this).attr('rel');
@@ -47,16 +43,16 @@ $(document).on('page:update', function (evt) {
 
 	$(document).on('page:load', function (evt) {
 		// evt.preventDefault();
-		// setIndexHeight('#news-index-wrapper');
+		// setHeight('#news-index-wrapper');
 
 		// $( '#news-index-content' ).hide();
 		// $( '#news-index-content' ).show('drop', {direction: Iris.direction}, 250, function () {});
 		// clearIndexHeight('#news-index-wrapper');
 	})
 
-	var setIndexHeight = function (selector, context) {
-		indexHeight = $(selector, context).height();
-		$(selector, context).css( 'height', indexHeight );
+	var setHeight = function (selector, context) {
+		height = $(selector, context).height();
+		$(selector, context).css( 'height', height );
 		// $(selector).animate( {height: indexheight}, 200);
 		// $('#news-index-wrapper').animate( {'border-width': '3px', 'border-style': 'solid', 'border-width': '1px solid'}, 200);
 	}

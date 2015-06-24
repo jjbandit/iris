@@ -2,8 +2,8 @@
 <%= render 'shared/nav_menu' %>
 
 <div class='main-content container' id='home-index'>
-	<div class='row-wrapper'>
-		<div class='row nav-anchor' id='overview'>
+	<div class='row-wrapper nav-anchor' id='overview'>
+		<div class='row'>
 
 			<h1 class='squid'>Linear Control Loading Redifined</h1>
 			<p>
@@ -20,8 +20,8 @@
 		</div>
 	</div>
 
-	<div class='row-wrapper'>
-		<div class='row nav-anchor' id='our-tech'>
+	<div class='row-wrapper nav-anchor' id='our-tech'>
+		<div class='row'>
 			<h1 class='squid'>Our Technology</h1>
 			<div class='col-md-6'>
 				<span>
@@ -49,12 +49,12 @@
 		</div>
 	</div>
 
-	<div class='row-wrapper'>
+	<div class='row-wrapper nav-anchor' id='news'>
 		<%= render "news/index" %>
 	</div>
 
-	<div class='row-wrapper'>
-		<div class='row nav-anchor' id='products'>
+	<div class='row-wrapper nav-anchor' id='products'>
+		<div class='row'>
 			<div class='col-md-6'>
 				<h1 class='squid'>Products</h1>
 				<%= render 'shared/catalog' %>
@@ -65,8 +65,8 @@
 		</div>
 	</div>
 
-	<div class='row-wrapper'>
-		<div class='row nav-anchor' id='about'>
+	<div class='row-wrapper nav-anchor' id='about'>
+		<div class='row'>
 			<h1 class='squid'>About</h1>
 			<div class='col-md-6'>
 				<h2>Directors</h2>
@@ -81,5 +81,11 @@
 	</div>
 
 		<%# <%= render "shared/home_glyphs" %1> %>
+
+	<div class='row-wrapper nav-anchor' id='contact'>
+		<div class='row'>
+			<h1 class='squid'>Contact</h1>
+		</div>
 	</div>
+
 </div>

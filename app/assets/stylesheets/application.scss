@@ -29,14 +29,6 @@ body {
 	height: 5000px;
 }
 
-.row-wrapper {
-	display: table;
-
-	.row {
-		display: table-cell;
-		vertical-align: middle;
-	}
-}
 
 .squid {
 	&:before {

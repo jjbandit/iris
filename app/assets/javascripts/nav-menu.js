@@ -1,18 +1,17 @@
 $( document ).on( 'page:update', function (evt) {
-	var s = skrollr.init();
 
 	var viewportHeight = $(window).height();
 	var navHeight = $('#nav-menu').height();
 	var headHeight = viewportHeight - navHeight;
-	$('.head-image').height(headHeight);
 
+	// Check if we're dealing with an offset nav menu
 	var offsetNavMenu = $('#nav-menu.offset');
-
 	if (offsetNavMenu.length !== 0) {
 		// Reset default styling to the offset version
 		offsetNavMenu.css('position', 'static');
 		offsetNavMenu.css('margin-top', -navHeight);
 
+		// Stick the nav to the top of the viewport when we scroll to it
 		$(window).on('scroll', function (evt) {
 			var scroll = $(window).scrollTop();
 
