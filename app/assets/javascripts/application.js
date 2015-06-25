@@ -32,5 +32,11 @@ $(document).on( 'page:change', function (evt) {
 	var navHeight = $('#nav-menu').height();
 	var secHeight = viewportHeight - navHeight;
 
+
 	$('.row-wrapper').css('height', viewportHeight );
+
+	window.addEventListener('resize', function (evt){
+		console.log('yay');
+		$('.row-wrapper').css('height', viewportHeight );
+	});
 });
