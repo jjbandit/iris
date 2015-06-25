@@ -25,12 +25,14 @@ body {
 	/* background-image:url("/images/webtreats_metal_4-1024px.jpg"); */
 	/* background-image:url("/images/webtreats_metal_4-1024px-grey.jpg"); */
 	/* background-image:url("/images/webtreats_metal_4-512px.jpg"); */
-	background: #111;
+	background: #ddd;
 	height: 5000px;
 }
 
 
 .squid {
+	border-bottom: 1px solid #333;
+	padding-bottom: 2px;
 	&:before {
 		content: '';
 		display: inline-block;
