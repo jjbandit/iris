@@ -1,4 +1,6 @@
-$navbar-height: 75px;
+$border-bottom-width: 1px;
+
+$navbar-height: 75px - $border-bottom-width;
 
 .nav-anchor {
 	margin-top: -75px;
@@ -17,6 +19,7 @@ $navbar-height: 75px;
 .navbar#nav-menu {
 	margin-bottom: 0;
 	border: 0;
+	border-bottom: $border-bottom-width solid #222;
 	position: fixed;
 	top: 0;
 
@@ -70,10 +73,18 @@ $navbar-height: 75px;
 		li a {
 			padding: 0 15px;
 
+			@media (min-width: 768px) and (max-width: 1200px) {
+				padding: 0;
+			}
+
 			h4 {
+			@media (min-width: 768px) and (max-width: 1200px) {
+					font-size: 1em;
+				}
 				line-height: $navbar-height;
 				margin: 0;
 				padding: 0 15px;
+
 			}
 		}
 	}

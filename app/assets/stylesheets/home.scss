@@ -12,6 +12,15 @@
 	section {
 		border-top: 2px solid #222;
 
+		&.sec-break {
+			max-height: 350px;
+			overflow: hidden;
+
+			.sec-image {
+				width: 100%;
+			}
+		}
+
 		/* Offset content down */
 		.row {
 			position: relative;
@@ -31,7 +40,6 @@
 
 		img {
 			display: block;
-			max-height: 400px;
 			margin: 0 auto;
 		}
 
@@ -49,6 +57,10 @@
 				/* account for border; image is 301px wide */
 				width: 305px;
 				border: 2px solid black;
+
+				img {
+					max-height: 400px;
+				}
 
 				.price {
 					display: block;

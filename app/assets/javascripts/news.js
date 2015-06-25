@@ -1,6 +1,6 @@
 Iris = {};
 
-$(document).on('page:update', function (evt) {
+$(document).on('page:change', function (evt) {
 
 	$('div.news-body').hide();
 
@@ -29,25 +29,25 @@ $(document).on('page:update', function (evt) {
 		// setHeight('#news-index-wrapper');
 
 		// // Make the animation scroll toward the link the user clicks
-		Iris.direction = $(this).attr('rel');
-		Iris.direction === 'previous' ? Iris.direction = 'up' : Iris.direction = 'down';
-		$( '#news-index-content' ).hide( 'slide', {direction: Iris.direction, }, 250 );
+		// Iris.direction = $(this).attr('rel');
+		// Iris.direction === 'previous' ? Iris.direction = 'up' : Iris.direction = 'down';
+		// $( '#news-index-content' ).hide( 'slide', {direction: Iris.direction, }, 250 );
 
 		Turbolinks.visit( evt.target.href, { scroll: false } );
 
 		// Set this here because turbolinks page:load event
 		// gets called an inconsistent number of times
-		Iris.direction === 'down' ? Iris.direction = 'up' : Iris.direction = 'down';
+		// Iris.direction === 'down' ? Iris.direction = 'up' : Iris.direction = 'down';
 	});
 
 
 	$(document).on('page:load', function (evt) {
-		evt.preventDefault();
-		setHeight('#news-index-wrapper');
+		// evt.preventDefault();
+		// setHeight('#news-index-wrapper');
 
-		$( '#news-index-content' ).hide();
-		$( '#news-index-content' ).show('slide', {direction: Iris.direction}, 250, function () {});
-		clearIndexHeight('#news-index-wrapper');
+		// $( '#news-index-content' ).hide();
+		// $( '#news-index-content' ).show('slide', {direction: Iris.direction}, 250, function () {});
+		// clearIndexHeight('#news-index-wrapper');
 	})
 
 	var setHeight = function (selector, context) {
