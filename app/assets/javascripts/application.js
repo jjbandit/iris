@@ -36,7 +36,6 @@ $(document).on( 'page:change', function (evt) {
 	$('.row-wrapper').css('height', viewportHeight );
 
 	window.addEventListener('resize', function (evt){
-		console.log('yay');
 		$('.row-wrapper').css('height', viewportHeight );
 	});
 });

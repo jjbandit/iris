@@ -38,10 +38,10 @@
 		/* Stripes */
 		&.even {
 			/* background-image:url(image_path('webtreats_metal_4-1024px-dark.jpg')); */
-			background: #ccc;
+			background: #ddd;
 		}
 		&.odd {
-			background: #eee;
+			background: #fafafa;
 		}
 
 		#overview {
@@ -77,6 +77,11 @@
 		#news {
 			img.news-thumb {
 				margin: 0 7px 0 0;
+			}
+		}
+		#about {
+			ul {
+				list-style: none;
 			}
 		}
 	}
