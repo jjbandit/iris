@@ -2,28 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-	.page-link {
-		&:link {
-			font-size: 16px;
-			text-align: center;
-		}
+#news-show-wrapper {
+	padding-top: 75px;
+	padding-bottom: 15px;
+}
 
-		&:before {
-		border: none;
-		font-size: 25px;
-		display: block;
-		margin: 0 auto -38px auto;
-		}
-
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: none;
-		}
+.page-link {
+	&:link {
+		font-size: 16px;
+		text-align: center;
 	}
 
-#news {
+	&:before {
+	border: none;
+	font-size: 25px;
+	display: block;
+	margin: 0 auto -38px auto;
+	}
 
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+#news {
 
 	.news-page-link-wrapper {
 		padding: 10px 0;

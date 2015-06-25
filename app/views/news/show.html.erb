@@ -1,9 +1,12 @@
+<%= render 'shared/nav_menu' %>
 <p id="notice"><%= notice %></p>
 
-<div class='col-md-8' id='news-article'>
-	<%= render 'news/show' %>
-</div>
+<div class='clearfix' id='news-show-wrapper'>
+	<div class='col-md-8' id='news-article'>
+		<%= render 'news/show' %>
+	</div>
 
-<div class='col-md-4'>
-	<%= render "news/index" %>
+	<div class='col-md-4' id='news'>
+		<%= render "news/index" %>
+	</div>
 </div>

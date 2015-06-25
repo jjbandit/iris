@@ -46,7 +46,7 @@ $(document).on('page:update', function (evt) {
 		setHeight('#news-index-wrapper');
 
 		$( '#news-index-content' ).hide();
-		$( '#news-index-content' ).show('drop', {direction: Iris.direction}, 250, function () {});
+		$( '#news-index-content' ).show('slide', {direction: Iris.direction}, 250, function () {});
 		clearIndexHeight('#news-index-wrapper');
 	})
 
