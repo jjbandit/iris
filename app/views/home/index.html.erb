@@ -4,7 +4,7 @@
 <div class='main-content' id='home-index'>
 	<section class='odd'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='overview'>
+			<div class='row-wrapper' id='overview'>
 				<div class='row'>
 
 					<div class='col-xs-6 col-md-8'>
@@ -36,8 +36,8 @@
 		</div>
 	</section>
 
-	<section class='sec-break'>
-		<h1 class='squid'>Our Technology</h1>
+	<section class='sec-break' id='our-tech-heading'>
+		<h1 class='squid-white'>Our Technology</h1>
 		<%# <%= image_tag '350-px-slides/iStock_000016863877_XXXLarge.jpg', class: 'sec-image' %1> %>
 		<%# <%= image_tag '350-px-slides/iStock_000019975185_Medium.jpg', class: 'sec-image' %1> %>
 		<%= image_tag '350-px-slides/iStock_000015463791_Medium.jpg', class: 'sec-image' %>
@@ -45,7 +45,7 @@
 
 	<section class='even'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='our-tech'>
+			<div class='row-wrapper' id='our-tech'>
 				<div class='row'>
 					<div class='col-md-6'>
 						<span>
@@ -75,54 +75,59 @@
 		</div>
 	</section>
 
-	<section class='sec-break'>
+	<section class='sec-break' id='news-heading'>
+		<h1 class='squid-white'>News</h1>
 		<%= image_tag '350-px-slides/iStock_000003036229_Large.jpg', class: 'sec-image' %>
 	</section>
 
 	<section class='odd'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='news'>
+			<div class='row-wrapper' id='news'>
 				<%= render "news/index" %>
 			</div>
 		</div>
 	</section>
 
-	<section class='sec-break'>
+	<section class='sec-break' id='products-services-heading'>
+		<h1 class='squid-white'>Products and Services</h1>
 		<%= image_tag '350-px-slides/iStock_000001325599_Large.jpg', class: 'sec-image' %>
 	</section>
 
 	<section class='even'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='products-services'>
+			<div class='row-wrapper' id='products-services'>
 				<div class='row'>
 					<div class='col-md-6 products'>
-						<h1 class='squid'>Products</h1>
 						<%= render 'shared/catalog' %>
 					</div>
 					<div class='col-md-6'>
-						<h1 class='squid'>Services</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class='sec-break'>
+	<section class='sec-break' id='about-heading'>
+		<h1 class='squid-white'>About</h1>
 		<%= image_tag '350-px-slides/iStock_000005642497Large.jpg', class: 'sec-image' %>
 	</section>
 
 	<section class='odd'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='about'>
+			<div class='row-wrapper' id='about'>
 				<div class='row'>
-					<h1 class='squid'>About</h1>
 					<div class='col-md-6'>
 						<h2>Directors</h2>
 						<ul>
 							<li>
-								<h3>Vern Little</h3><h4>Chief Executive Officer</h4></li>
-							<li><h3>Gary Garritan</h3><h4>Chief Financial Officer</h4></li>
-							<li><h3>Patrick McFadden</h3><h4>Chief Technical Officer</h4></li>
+								<h3>Vern Little</h3><h4>Chief Executive Officer</h4>
+							</li>
+							<li>
+								<h3>Gary Garritan</h3><h4>Chief Financial Officer</h4>
+							</li>
+							<li>
+								<h3>Patrick McFadden</h3><h4>Chief Technical Officer</h4>
+							</li>
 						</ul>
 
 					</div>
@@ -137,29 +142,29 @@
 		</div>
 	</section>
 
-	<section class='sec-break'>
+	<section class='sec-break' id='contact-heading'>
+		<h1 class='squid'>Contact</h1>
 		<%= image_tag '350-px-slides/iStock_000041727900XXLarge.jpg', class: 'sec-image' %>
 	</section>
 
 	<section class='even'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='contact'>
+			<div class='row-wrapper' id='contact'>
 				<div class='row'>
-					<h1 class='squid'>Contact</h1>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class='sec-break'>
+	<section class='sec-break' id='kickstarter'>
+		<h1 class='squid-white'>Thank-you Kickstarter!</h1>
 		<%= image_tag '350-px-slides/iStock_000041727900XXLarge.jpg', class: 'sec-image' %>
 	</section>
 
 	<section class='odd'>
 		<div class='container'>
-			<div class='row-wrapper nav-anchor' id='kickstarter'>
+			<div class='row-wrapper' id='kickstarter-content'>
 				<div class='row'>
-					<h1 class='squid'>Thank-you Kickstarter!</h1>
 					<h4>
 						Thanks to the support of our 186 backers we raised almost $90,000 to help bring this project to life!
 					</h4>

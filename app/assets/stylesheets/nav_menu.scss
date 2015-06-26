@@ -3,12 +3,12 @@ $border-bottom-width: 1px;
 $navbar-height: 75px - $border-bottom-width;
 
 .nav-anchor {
-	margin-top: -75px;
 
 	&:before {
 		content: '';
 		display: block;
 		height: 75px;
+		margin-top: -75px;
 	}
 }
 
