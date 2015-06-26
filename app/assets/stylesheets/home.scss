@@ -42,7 +42,7 @@
 		/* Offset content down */
 		.row {
 			position: relative;
-			top: 15%;
+			top: 5%;
 
 			/* Less for mobile */
 			@media (max-width: 768px) {
@@ -51,9 +51,9 @@
 
 		/* And make the descriptions nice */
 			.desc {
+				padding-bottom: 1.5em;
 				font-size: 1.22em;
 				line-height: 1.5em;
-				padding-bottom: 15px;
 			}
 		}
 
@@ -113,6 +113,13 @@
 		#about {
 			ul {
 				list-style: none;
+			}
+
+			.desc {
+				font-size: 1.4em;
+			}
+			.director {
+				padding-bottom: 1em;
 			}
 		}
 	}
