@@ -15,6 +15,8 @@ gem 'paperclip', '~> 4.2'
 gem 'spree_frontend', '3.0.1'
 gem 'spree_backend', '3.0.1'
 gem 'spree_core', '3.0.1'
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 gem 'spree_sample', '3.0.1'
 gem 'deface', '1.0.1'
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", :branch => "3-0-stable"
