@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 	devise_for :users
 
 	resources :news
+	# Requires controller: because rails expects conroller to be pluralized; it looks for ContactsController
 	resource :contact, controller: 'contact'
 
 	# Declare root view

@@ -1,9 +1,9 @@
 class ContactController < ApplicationController
-	def new
-	end
+	before_filter
 
 	def create
-		puts 'yay, email!'
+		ContactMailer.contact_email.deliver_now
+		flash[:notice] = 'success!'
 		redirect_to root_url
 	end
 end
