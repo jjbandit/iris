@@ -1,0 +1,41 @@
+<%= form_tag controller: 'contact', action: 'create', method: 'post', remote: true do %>
+	<div class='col-md-12'>
+		<div class='col-md-4 form-field'>
+			<%= label_tag :email %>
+			<%= text_field_tag :email %>
+		</div>
+
+
+		<div class='col-md-4 form-field'>
+			<%= label_tag :name %>
+			<%= text_field_tag :name %>
+		</div>
+
+
+		<div class='col-md-4 form-field'>
+			<%= label_tag :org %>
+			<%= text_field_tag :org %>
+		</div>
+	</div>
+
+	<div class='col-md-12 form-row'>
+		<div class='col-md-12 form-field'>
+			<%= label_tag :subject %>
+			<%= text_field_tag :subject %>
+		</div>
+	</div>
+
+	<div class='col-md-12 form-row'>
+		<div class='col-md-12 form-field'>
+			<%= label_tag :message %>
+			<%= text_area_tag :message %>
+		</div>
+	</div>
+
+	<div class='col-md-12 form-row'>
+		<div class='col-md-12 form-field'>
+			<%= submit_tag 'Send Message' %>
+		</div>
+	</div>
+
+<% end %>

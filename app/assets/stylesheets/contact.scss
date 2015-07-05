@@ -1,0 +1,22 @@
+// Place all the styles related to the contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#contact {
+	.form-row {
+		padding-top: 15px;
+
+		.form-field {
+			display: inline-block;
+
+			#message {
+				width: 100%;
+				height: 200px;
+			}
+		}
+	}
+
+	label {
+		display: block;
+	}
+}
