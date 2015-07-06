@@ -1,9 +1,20 @@
 class ContactController < ApplicationController
-	before_filter
+	respond_to :json
+
+	before_filter :validate_message, only: :create
 
 	def create
+		@contact = Contact.new(params)
+		puts @contact
+		puts !!!!!!!!!!!!!!!!!!!!!!!!!!
 		ContactMailer.contact_email.deliver_now
-		flash[:notice] = 'success!'
-		redirect_to root_url
+		render partial: 'shared/success'
 	end
+
+	protected
+
+	def validate_message
+		params.permit(:email, :name, :message, :org)
+	end
+
 end
