@@ -14,6 +14,11 @@ $(document).ready( function (evt) {
 		console.log(data);
 		alert("Success!");
 	});
+	$('form#contact-form').on('ajax:failure', function (evt, data, status, xhr) {
+		console.log(evt);
+		console.log(data);
+		alert("Failed!");
+	});
 
 	$('form#contact-form', function () {
 	});

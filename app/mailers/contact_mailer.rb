@@ -1,15 +1,21 @@
 class ContactMailer < ApplicationMailer
-  default from: 'jesse.hughes.it@gmail.com'
-  layout 'mailer'
+	default from: 'jesse.hughes.it@gmail.com'
+	default subject: 'Message from IrisDynamics.com Contact'
 
-	def contact_email
+	layout 'mailer'
+
+	def contact message, email, name, org
+
 		contact_address = 'revelstokesnowboard@gmail.com'
+		message_subject = 'IrisDynamics.com Contact Message from ' + name
 
-		mail(
-			to: contact_address,
-			subject: 'Contact, yay!',
-			template_path: 'contact_mailer',
-			template_name: 'contact'
-		)
+		@email = email
+		@name = name
+		@message = message
+		@org = org
+
+		mail( to: contact_address,
+					reply_to: @email,
+					subject: message_subject)
 	end
 end

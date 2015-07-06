@@ -4,11 +4,8 @@ class ContactController < ApplicationController
 	before_filter :validate_message, only: :create
 
 	def create
-		@contact = Contact.new(params)
-		puts @contact
-		puts !!!!!!!!!!!!!!!!!!!!!!!!!!
-		ContactMailer.contact_email.deliver_now
-		render partial: 'shared/success'
+		cont = ContactMailer.contact(params[:message], params[:email], params[:name], params[:org]).message
+		cont.deliver
 	end
 
 	protected
