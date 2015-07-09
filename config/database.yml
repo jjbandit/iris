@@ -87,5 +87,5 @@ staging:
 production:
   <<: *default
   database: iris_production
-  username: cap-user
+  username: deploy
   password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>

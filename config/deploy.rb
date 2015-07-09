@@ -3,7 +3,6 @@ lock '3.4.0'
 
 set :application, 'iris'
 set :repo_url, 'git@github.com:jjbandit/iris.git'
-set :user, 'cap-user'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.2.2'
