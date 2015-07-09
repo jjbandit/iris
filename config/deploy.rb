@@ -11,6 +11,9 @@ set :rbenv_ruby, '2.2.2'
 # Restrict cap-user sudo access
 set :passenger_restart_with_touch, true
 
+set :stages, ["staging", "production"]
+set :default_stage, "staging"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

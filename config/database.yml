@@ -78,6 +78,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  database: iris_production
+  username: cap-user
+  password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   database: iris_production

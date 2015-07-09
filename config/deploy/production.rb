@@ -7,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-server 'server', roles: %w{app web db}, user: 'cap-user'
+server 'iris', roles: %w{app web db}, user: 'cap-user'
 set :deploy_to, '/home/cap-user/www/iris'
 set :deploy_via, :copy
 
