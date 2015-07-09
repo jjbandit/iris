@@ -21,6 +21,9 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
+  username: <%= ENV['IRIS_DATABASE_USER'] %>
+  password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>
+
 development:
   <<: *default
   database: iris_development
@@ -29,7 +32,6 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  username: iris
 
   # The password associated with the postgres role (username).
   # password:
@@ -58,7 +60,7 @@ development:
 test:
   <<: *default
   database: iris_test
-  username: iris
+
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -81,11 +83,7 @@ test:
 staging:
   <<: *default
   database: iris_production
-  username: cap-user
-  password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
   database: iris_production
-  username: deploy
-  password: <%= ENV['IRIS_DATABASE_PASSWORD'] %>
