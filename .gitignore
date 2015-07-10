@@ -18,6 +18,9 @@ tags
 # Gemfile.lock
 Gemfile.lock
 
+# Secrets should be secret!
+config/secrets.yml
+
 # Ignore dev and user assets
 public/spree
 public/system
