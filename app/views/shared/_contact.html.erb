@@ -1,40 +1,37 @@
 <%= form_tag('/contact', action: 'create', id: 'contact-form', remote: true, method: 'post') do %>
 	<div class='col-md-12'>
-		<div class='col-md-4 form-field'>
+		<div class='col-md-4 form-group'>
 			<%= label_tag :email %>
-			<%= text_field_tag :email %>
+			<%= text_field_tag :email, nil, class: 'form-control' %>
 		</div>
 
 
-		<div class='col-md-4 form-field'>
+		<div class='col-md-4 form-group'>
 			<%= label_tag :name %>
-			<%= text_field_tag :name %>
+			<%= text_field_tag :name, nil, class: 'form-control' %>
 		</div>
 
 
-		<div class='col-md-4 form-field'>
+		<div class='col-md-4 form-group'>
 			<%= label_tag :org %>
-			<%= text_field_tag :org %>
+			<%= text_field_tag :org, nil, class: 'form-control' %>
 		</div>
 	</div>
 
-	<div class='col-md-12 form-row'>
-		<div class='col-md-12 form-field'>
+
+	<div class='col-md-12'>
+		<div class='col-md-12 form-group'>
 			<%= label_tag :subject %>
-			<%= text_field_tag :subject %>
+			<%= text_field_tag :subject, nil, class: 'form-control' %>
 		</div>
-	</div>
 
-	<div class='col-md-12 form-row'>
-		<div class='col-md-12 form-field'>
+		<div class='col-md-12 form-group'>
 			<%= label_tag :message %>
-			<%= text_area_tag :message %>
+			<%= text_area_tag :message, nil, class: 'form-control' %>
 		</div>
-	</div>
 
-	<div class='col-md-12 form-row'>
-		<div class='col-md-12 form-field'>
-			<%= submit_tag 'Send Message' %>
+		<div class='col-md-2 form-group'>
+			<%= submit_tag 'Send Message', class: 'btn btn-default' %>
 		</div>
 	</div>
 
