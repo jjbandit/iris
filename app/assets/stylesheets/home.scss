@@ -50,9 +50,10 @@
 			}
 
 		/* And make the descriptions nice */
-			.desc {
+			.desc > p,
+			.desc li {
 				padding-bottom: 1.5em;
-				font-size: 1.22em;
+				font-size: 1.1em;
 				line-height: 1.5em;
 			}
 		}
@@ -111,15 +112,23 @@
 			}
 		}
 		#about {
-			ul {
-				list-style: none;
-			}
-
-			.desc {
-				font-size: 1.4em;
-			}
 			.director {
 				padding-bottom: 1em;
+			}
+			#partners {
+				.logos {
+					height: 200px;
+
+					.logo-wrapper {
+						line-height: 200px;
+
+						img {
+							width: 100%;
+							display: inline;
+							text-align: center;
+						}
+					}
+				}
 			}
 		}
 	}
