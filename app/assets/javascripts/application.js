@@ -26,18 +26,3 @@
 //
 //= require turbolinks
 
-$(document).on( 'page:change', function (evt) {
-
-	var viewportHeight = $(window).height();
-	var navHeight = $('#nav-menu').height();
-	var secBreakHeight = $('#news-heading').height();
-
-	var secHeight = viewportHeight - secBreakHeight;
-
-
-	$('.row-wrapper').css('min-height', secHeight );
-
-	window.addEventListener('resize', function (evt){
-		$('.row-wrapper').css('min-height', secHeight );
-	});
-});
