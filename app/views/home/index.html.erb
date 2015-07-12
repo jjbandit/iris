@@ -9,18 +9,20 @@
 
 					<div class='col-xs-6 col-md-8'>
 						<div class='desc'>
-							<p>
+							<p><i>
 								Iris Dynamics produces precision motion control systems that are transforming
 								how people interact with machines of all types.
-							</p>
+							</i></p>
 							<p>
 								Our patent-pending technology provides haptic feedback and control loading technology
 								at a dramatically lower cost. The core technology is ideally suited for flight simulation,
 								as well as remote operation applications in aerospace equipment, submersibles, vehicles
 								and heavy machinery.
 							</p>
-							<div class='col-md-12 desc'>
-								<ul class='list-unstyled'>
+
+							<div class='col-md-6 desc nospace'>
+								<h3> Advantages </h3>
+								<ul>
 									<li> Cost Effective </li>
 									<li> Low Latency - Smooth real-time response </li>
 									<li> A single moving part increases reliability and lowers maintenance costs </li>
@@ -29,11 +31,24 @@
 									<li> Reduces fuel consumption and lowers CO2 emissions </li>
 								</ul>
 							</div>
+
+							<div class='col-md-6 desc nospace'>
+								<h3> Applications </h3>
+								<ul>
+									<li> Flight Simulation </li>
+									<li> Remote-Controlled Submersible Devices </li>
+									<li> Remotely Piloted Aircraft Systems</li>
+									<li> Tele-Robotics </li>
+									<li> Remotely Operated Vehicles (ROVs)</li>
+									<li> Heavy Equipment </li>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 					<div class='col-xs-6 col-md-4'>
 						<div class='image-hook'>
-							<%= image_tag 'Custom_Install.jpg', class: 'tech-image' %>
+							<%= image_tag 'iris-tech-3.png', class: 'tech-image' %>
 						</div>
 					</div>
 				</div>
@@ -64,17 +79,17 @@
 							superior performance, with few moving parts, and most importantly, at a fraction of the cost.
 						</p>
 						<blockquote>
-							<h4>
-								Iris Dynamics' solution is a mechanically simple design with a single moving part, which translates
+							<h4><i>
+								"Iris Dynamics' solution is a mechanically simple design with a single moving part, which translates
 								to reduced costs, higher reliability, and operation in challenging environments. It feels natural
-								and real like flying an actual aircraft.
-							</h4>
+								and real like flying an actual aircraft."
+							</i></h4>
 						</blockquote>
 					</div>
 
 					<div class='col-md-6'>
 						<span>
-							<%= image_tag 'iris-tech-1.jpg', class: 'tech-image' %>
+							<%= image_tag 'wireframe-coil-shaft.png', class: 'tech-image' %>
 						</span>
 						<div class='desc'>
 							<p>
@@ -87,7 +102,7 @@
 
 					<div class='col-md-6'>
 						<span>
-							<%= image_tag 'iris-tech-2.png', class: 'tech-image' %>
+							<%= image_tag 'wireframe-coil.png', class: 'tech-image' %>
 						</span>
 						<div class='desc'>
 							<p>
@@ -101,17 +116,10 @@
 						</div>
 					</div>
 					<div class='col-md-12 desc'>
-						<blockquote>
-							<h2>
-								Real Feel - Is it Real or Simulated?
-							</h2>
-						</blockquote>
 						<p>
 							This new class of tactile motion control systems with force feedback is adaptable and scalable,
-							with applications in a wide variety of industries. The ability to tactilely 'feel' a device in motion
-							is becoming very important in teleoperators such as emote-controlled submersible devices, remotely
-							piloted aircraft systems, tele-robotics, remotely operated vehicles (ROVs) and heavy equipment.  Iris
-							Dynamics is currently working on various tactile teleoperation projects.
+							with applications in a wide variety of industries.
+							Iris Dynamics is currently working on various tactile teleoperation projects.
 						</p>
 					</div>
 				</div>
@@ -178,7 +186,7 @@
 
 	<section class='sec-break' id='about-heading'>
 		<h1 class='squid-white'>About</h1>
-		<%= image_tag '350-px-slides/iStock_000016863877_XXXLarge.jpg', class: 'sec-image' %>
+		<%= image_tag '350-px-slides/iStock_000016863877_XXXLarge.png', class: 'sec-image' %>
 	</section>
 
 	<section class='odd'>
@@ -197,7 +205,7 @@
 						</p>
 					</div>
 					<div class='col-md-6'>
-						<h2>Borad of Directors</h2>
+						<h2>Board of Directors</h2>
 						<ul class='list-unstyled'>
 							<li class='director'>
 								<h5>Patrick McFadden</h5><h6>Chief Technical Officer and Co-Founder</h6>
@@ -232,7 +240,7 @@
 								<%= image_tag 'partner_logos/bcic.png' %>
 							</div>
 							<div class='col-xs-4 col-sm-2 logo-wrapper'>
-								<%= image_tag 'partner_logos/ice.jpg' %>
+								<%= image_tag 'partner_logos/ice.png' %>
 							</div>
 							<div class='col-xs-4 col-sm-2 logo-wrapper'>
 								<%= image_tag 'partner_logos/uVic.png' %>
@@ -248,7 +256,7 @@
 							</div>
 						</div>
 						<div class='col-xs-12 logos'>
-							<div class='col-xs-offset-1 col-xs-4 col-sm-2 logo-wrapper'>
+							<div class='col-xs-offset-2 col-xs-4 col-sm-2 logo-wrapper'>
 								<%= image_tag 'partner_logos/nrc.png' %>
 							</div>
 							<div class='col-xs-4 col-sm-2 logo-wrapper'>
@@ -259,9 +267,6 @@
 							</div>
 							<div class='col-xs-4 col-sm-2 logo-wrapper'>
 								<%= image_tag 'partner_logos/viatec.jpg' %>
-							</div>
-							<div class='col-xs-4 col-sm-2 logo-wrapper'>
-								<%= image_tag 'partner_logos/made-in-can.jpg' %>
 							</div>
 						</div>
 					</div>
@@ -294,8 +299,7 @@
 		<div class='container'>
 			<div class='row-wrapper' id='kickstarter-content'>
 				<div class='row'>
-					<h4>
-					</h4>
+					<%= image_tag 'partner_logos/made-in-can.jpg' %>
 				</div>
 			</div>
 		</div>
