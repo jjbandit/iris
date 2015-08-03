@@ -10,6 +10,7 @@ $(document).on( 'page:change', function (evt) {
 
 	setSectionHeights();
 	centerSectionContents();
+	$('#overview').css('min-height', viewportHeight);
 
 	window.addEventListener('resize', function (evt){
 		setSectionHeights();
