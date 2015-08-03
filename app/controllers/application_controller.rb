@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 	private
 
 	def set_catalog
-		@products = Spree::Product.take 1
+		@products = Spree::Product.take 3
 	end
 
 end

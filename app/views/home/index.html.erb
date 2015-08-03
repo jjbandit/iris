@@ -2,6 +2,7 @@
 <%= render 'shared/nav_menu' %>
 
 <div class='main-content' id='home-index'>
+
 	<section class='odd'>
 		<div class='container'>
 			<div class='row-wrapper' id='overview'>
@@ -9,6 +10,7 @@
 
 					<div class='col-xs-6 col-md-8'>
 						<div class='desc'>
+							<h1>Overview</h1>
 							<p><i>
 								Iris Dynamics produces precision motion control systems that are transforming
 								how people interact with machines of all types.
@@ -48,7 +50,7 @@
 					</div>
 					<div class='col-xs-6 col-md-4'>
 						<div class='image-hook'>
-							<%= image_tag 'iris-tech-3.png', class: 'tech-image' %>
+							<%= image_tag 'iris-tech-3-trans.png', Class: 'tech-image' %>
 						</div>
 					</div>
 				</div>
@@ -151,9 +153,10 @@
 				<div class='row'>
 					<h3>Products</h3>
 					<span class='desc'>
-						Iris Dynamics currently offers its flagship product -  the “Commander Control Loading Yoke” to the
-						global prosumer flight simulator market.  We also offer custom Commercial-off-the-Shelf (COTS)
-						products using our core technology to military and civilian customers.
+						Iris Dynamics currently offers three products. The Bumblebee Control Loading Yoke is our low-cost
+						consumer product.  The Dragonfly Control Loading Yoke serves the global prosumer flight simulator market.
+						The EMz Control Loading Module is our commercial-off-the-Shelf (COTS) product which uses our core
+						technology to military and civilian system integrators.
 					</span>
 					<div class='col-md-12 products'>
 						<%= render 'shared/catalog' %>
@@ -197,34 +200,31 @@
 						<p>
 							Iris Dynamics, Ltd. is a privately-owned Canadian advanced technology company headquarted
 							in Sidney, British Columbia, Canada, near the Victoria International Airport.
-						</p>
-						<p>
 							Iris Dynamics has created a bold new class of variable force motion control systems. Its core
 							technology improves the human-machine interface by adding precision force feedback and
 							haptic feel.  Iris Dynamics has filed for PCT (international) and US Patents on its technologies.
 						</p>
 					</div>
+					<h2>Team</h2>
 					<div class='col-md-6'>
-						<h2>Board of Directors</h2>
 						<ul class='list-unstyled'>
 							<li class='director'>
 								<h5>Patrick McFadden</h5><h6>Chief Technical Officer and Co-Founder</h6>
 							</li>
 							<li class='director'>
-								<h5>Kyle Hagen</h5><h6>Systems Development and Co-Founder</h6>
+								<h5>Gary Garritan</h5><h6>Advisor and Co-Founder</h6>
 							</li>
 							<li class='director'>
 								<h5>Vern Little</h5><h6>Advisor and Co-Founder</h6>
-							</li>
-							<li class='director'>
-								<h5>Gary Garritan</h5><h6>Advisor and Co-Founder</h6>
 							</li>
 						</ul>
 
 					</div>
 					<div class='col-md-6'>
-						<h2>Advisors</h2>
 						<ul class='list-unstyled'>
+							<li class='director'>
+								<h5>Kyle Hagen</h5><h6>Systems Development and Co-Founder</h6>
+							</li>
 							<li class='director'>
 								<h5>John Nicol</h5><h6>Advisor to the Board</h6>
 							</li>
@@ -234,7 +234,7 @@
 						</ul>
 					</div>
 					<div class='col-xs-12' id='partners'>
-						<h2> Partners </h2>
+						<h2> Partners & Supporters </h2>
 						<div class='col-md-12 logos'>
 							<div class='col-xs-4 col-sm-2 logo-wrapper'>
 								<%= image_tag 'partner_logos/bcic.png' %>

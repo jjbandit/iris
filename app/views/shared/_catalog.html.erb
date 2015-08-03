@@ -1,6 +1,6 @@
 <% @products.each do |product| %>
 	<% url = spree.product_url(product) %>
-	<div class='product-teaser'>
+	<div class='col-sm-4 product-teaser'>
 		<%= link_to url do %>
 			<h4> <%= product.name %> </h4>
 			<% if product.master_images.count > 0 %>
