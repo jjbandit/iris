@@ -12,6 +12,14 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+.btn.btn-danger {
+	color: #333;
+	&:hover {
+		color: #ddd;
+	}
+
+}
+
 pre {
   background-color: #eee;
   padding: 10px;

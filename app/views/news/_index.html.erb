@@ -2,7 +2,7 @@
 	<div class='clearfix' id='news-index-content'>
 		<% if current_user.try(:admin?) %>
 			<div >
-				<%= link_to 'Create News', new_news_path %>
+				<%= link_to 'Create News', new_news_path, class: 'btn btn-default' %>
 			</div>
 		<% end %>
 
