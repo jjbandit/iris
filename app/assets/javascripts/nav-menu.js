@@ -4,27 +4,34 @@ $( document ).on( 'page:update', function (evt) {
 	var navHeight = $('#nav-menu').height();
 	var headHeight = viewportHeight - navHeight;
 
-	// Check if we're dealing with an offset nav menu
 	var offsetNavMenu = $('#nav-menu.offset');
-	if (offsetNavMenu.length !== 0) {
-		// Reset default styling to the offset version
-		offsetNavMenu.css('position', 'static');
-		offsetNavMenu.css('margin-top', -navHeight);
 
-		// Stick the nav to the top of the viewport when we scroll to it
-		$(window).on('scroll', function (evt) {
-			var scroll = $(window).scrollTop();
 
-			if (scroll >= headHeight) {
-				offsetNavMenu.css('position', 'fixed');
-				offsetNavMenu.css('margin', '0');
-			}
+	$( window ).load( function () {
+		// Check if we're dealing with an offset nav menu
+		offsetNavMenu = $('#nav-menu.offset');
+		if (offsetNavMenu.length !== 0) {
+			setNavPosition(offsetNavMenu);
+		}
+	});
 
-			else if (scroll <= headHeight) {
-				offsetNavMenu.css('position', 'static');
-				offsetNavMenu.css('margin-top', -navHeight);
-			}
-		});
+	// Stick the nav to the top of the viewport when we scroll to it
+	$(window).on('scroll', function (evt) {
+		setNavPosition(offsetNavMenu);
+	});
+
+	function setNavPosition (navMenu) {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= headHeight) {
+			navMenu.css('position', 'fixed');
+			navMenu.css('margin', '0');
+		}
+
+		else if (scroll <= headHeight) {
+			navMenu.css('position', 'static');
+			navMenu.css('margin-top', -navHeight);
+		}
 	}
 
 	// from https://css-tricks.com/snippets/jquery/smooth-scrolling/
