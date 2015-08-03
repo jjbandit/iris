@@ -63,13 +63,16 @@
 
 			.translucent {
 				background: #ccc;
-				opacity: 0.85;
+				opacity: 0.95;
 			}
 		}
 	}
 }
 
 img.full-width  {
-	width: 100%;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 15px 0;
 }
 
