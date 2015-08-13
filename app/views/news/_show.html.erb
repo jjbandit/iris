@@ -1,11 +1,11 @@
-<h1> <%= @news.title %> </h1>
+<div>
+	<h1 class='news-buttons'> <%= @news.title %> </h1>
 
-<% if current_user.try(:admin?) %>
-	<div class='col-md-12'>
-		<%= link_to 'Edit', edit_news_path(@news), class: 'btn btn-default' %>
-		<%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-	</div>
-<% end %>
+	<% if current_user.try(:admin?) %>
+			<%= link_to 'Edit', edit_news_path(@news), class: 'btn btn-default news-buttons' %>
+			<%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger news-buttons' %>
+	<% end %>
+</div>
 
 <div class='col-xs-12'>
 	<%= image_tag @news.image.url(:large), class: 'full-width'%>

@@ -15,6 +15,8 @@ Spree.config do |config|
   # config.track_inventory_levels = false
 end
 
+Spree::Image.attachment_definitions[:attachment][:path] = ':rails_root/public/system/spree/products/:id/:style/:basename.:extension';
+
 Spree.user_class = "User"
 
           Rails.application.config.to_prepare do
