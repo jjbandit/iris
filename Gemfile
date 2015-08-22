@@ -70,6 +70,7 @@ gem 'bcrypt', '~> 3.1.7'
 	gem 'lorem_ipsum_amet'
 
 group :development, :test do
+	gem 'rspec'
 
 	# Deployment automation
 	gem 'capistrano', '~> 3.4.0'
