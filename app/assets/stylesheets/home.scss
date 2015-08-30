@@ -47,26 +47,17 @@
 			}
 		}
 
-		/* Offset content down */
 		.row {
 			position: relative;
-			padding-bottom: 15px;
+			padding: 15px 0;
 
-			/* Less for mobile */
-			@media (max-width: 768px) {
-				top: 15px;
-			}
-
-		/* And make the descriptions nice */
+		/* Make the descriptions nice */
 			.desc > p,
 			.desc li {
 				padding-bottom: 1em;
 				font-size: 1.1em;
 				line-height: 1.5em;
 				list-style: none;
-			}
-
-			.nospace > li {
 			}
 		}
 
@@ -84,11 +75,19 @@
 			background: #fafafa;
 		}
 
+		/*
+		* Section bodies
+		*/
+
 		#overview {
+
+			.desc.nospace > ul  {
+				padding: 0 10px;
+			}
+
 			.image-hook {
 				/* account for border; image is 301px wide */
 				width: 305px;
-				/* border: 2px solid black; */
 
 				img {
 					max-height: 400px;
@@ -121,6 +120,7 @@
 				padding-top: 23px;
 			}
 		}
+
 		#news {
 			#news-index-content {
 				position: relative;
@@ -130,6 +130,7 @@
 				margin: 0 7px 0 0;
 			}
 		}
+
 		#about {
 			.director {
 				padding-bottom: 1em;
@@ -158,27 +159,4 @@
 			}
 		}
 	}
-
-	/* .glyph-wrapper { */
-	/* 	padding: 15px 0 0 0; */
-
-	/* 	.title{ */
-	/* 		&:after { */
-	/* 			content: ''; */
-	/* 			margin: 10px auto 0 auto; */
-	/* 			text-align: center; */
-	/* 			display:block; */
-	/* 			width:140px; */
-	/* 			height: 5px; */
-	/* 			background: #aaa; */
-	/* 		} */
-	/* 	} */
-	/* 	.glyph { */
-	/* 		padding-top: 25px; */
-	/* 		text-align: center; */
-	/* 		p { */
-	/* 			text-align: left; */
-	/* 		} */
-	/* 	} */
-	/* } */
 }
