@@ -4,22 +4,24 @@
 <%# don't preserve :page in url if we're not linking from the news controller %>
 <% controller_name == 'news' ? page = params[:page] :  page = '1' %>
 
-<%= link_to news_path(news, page: page ), class: view_width do %>
-<div class='news-teaser-wrapper' style='background-image:url("<%= background_url %>")' >
+
+<div class='news-teaser-wrapper clearfix <% view_width %>'>
 	<div class='news-teaser-content'>
 
-		<div class='translucent news-title'>
+		<div class='news-title'>
 			<h4> <%= news.title %> </h4>
 		</div>
 
-		<div class='news-body translucent'>
+		<div class='news-body'>
 			<p> <%= time_ago_in_words(news.created_at) %> ago</p>
 
 			<p>
-				<%= truncate(news.body, length: 100, separator: '.') %>
+				<%= truncate(news.body, length: 200, separator: '.') %>
 			</p>
 		</div>
 
+		<%= link_to news_path(news, page: page ), class: 'news-teaser-more-link' do %>
+			<span>Read More</span>
+		<% end %>
 	</div>
 </div>
-<% end %>

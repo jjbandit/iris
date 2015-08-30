@@ -34,35 +34,34 @@
 		text-align: center;
 	}
 	.news-teaser-link-wrapper {
-		display: table;
 		width: 100%;
 	}
 
 	.news-teaser-wrapper {
-		max-width: 450px;
-		width: 100%;
-		background: no-repeat center content-box;
-		padding-top: 10px;
+		max-width: 550px;
+		padding: 15px 0;
 		margin: 0 auto;
+		border-bottom: 1px dotted #ccc;
 
 		.news-teaser-content {
-			height: 150px;
-			margin: 10px;
 
-
-			.news-body,
 			.news-title {
-				p,
-				h4
-				{
+				text-transform: uppercase;
+				h4 {
+					margin: 0;
+					padding: 6px 0;
+				}
+
+				.news-body,
+				p {
 					padding: 6px 13px;
 					margin: 0;
 				}
 			}
 
-			.translucent {
-				background: #ccc;
-				opacity: 0.95;
+			.news-teaser-more-link {
+				margin: 0;
+				padding: 0;
 			}
 		}
 	}
