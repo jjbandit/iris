@@ -43,14 +43,14 @@
 		margin: 0 auto;
 		border-bottom: 1px dotted #ccc;
 
-		.news-teaser-content {
+		.news-title {
+			text-transform: uppercase;
+			h4 {
+				margin: 0;
+				padding: 6px 0;
+			}
 
-			.news-title {
-				text-transform: uppercase;
-				h4 {
-					margin: 0;
-					padding: 6px 0;
-				}
+		.news-teaser-content {
 
 				.news-body,
 				p {
