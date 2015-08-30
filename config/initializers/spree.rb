@@ -15,7 +15,11 @@ Spree.config do |config|
   # config.track_inventory_levels = false
 end
 
+# Set absolute path to upload images to
 Spree::Image.attachment_definitions[:attachment][:path] = ':rails_root/public/system/spree/products/:id/:style/:basename.:extension';
+
+# Set path relative to public/ to retrieve images from
+Spree::Image.attachment_definitions[:attachment][:url] = '/system/spree/products/:id/:style/:basename.:extension';
 
 Spree.user_class = "User"
 
