@@ -66,6 +66,11 @@
 	}
 }
 
+#news-body,
+.news-teaser-wrapper {
+	overflow: hidden;
+}
+
 img.full-width  {
 	display: block;
 	width: 80%;

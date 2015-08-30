@@ -16,6 +16,8 @@
 //
 //= require_tree .
 //
+//= require ckeditor/init
+//
 //= require jquery-ui/effect.all
 //= require bootstrap-sprockets
 //
@@ -25,4 +27,3 @@
 //= require skrollr.stylesheets
 //
 //= require turbolinks
-

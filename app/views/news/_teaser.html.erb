@@ -21,7 +21,7 @@
 			<p> <%= time_ago_in_words(news.created_at) %> ago</p>
 
 			<p>
-				<%= truncate(news.body, length: 200, separator: '.') %>
+				<%= truncate( raw(news.body), length: 200, separator: '.') %>
 			</p>
 		</div>
 

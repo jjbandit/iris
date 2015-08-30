@@ -1,6 +1,5 @@
 <div>
 	<h1 class='news-buttons'> <%= @news.title %> </h1>
-
 	<% if current_user.try(:admin?) %>
 			<%= link_to 'Edit', edit_news_path(@news), class: 'btn btn-default news-buttons' %>
 			<%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger news-buttons' %>
@@ -11,6 +10,6 @@
 	<%= image_tag @news.image.url(:large), class: 'full-width'%>
 </div>
 
-<p>
-<%= @news.body %>
-</p>
+<div class='col-xs-12' id='news-body'>
+	<%= raw @news.body %>
+</div>
