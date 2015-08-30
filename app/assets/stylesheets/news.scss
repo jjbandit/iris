@@ -45,24 +45,23 @@
 
 		.news-title {
 			text-transform: uppercase;
+			padding: 0;
 			h4 {
 				margin: 0;
 				padding: 6px 0;
 			}
+		}
 
-		.news-teaser-content {
+		.news-teaser-more-link {
+			margin: 0;
+			padding: 0;
+		}
 
-				.news-body,
-				p {
-					padding: 6px 13px;
-					margin: 0;
-				}
-			}
-
-			.news-teaser-more-link {
-				margin: 0;
-				padding: 0;
-			}
+		img {
+			display: block;
+			height: 80px;
+			width: 80px;
+			margin: 0 auto;
 		}
 	}
 }
