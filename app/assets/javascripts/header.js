@@ -1,5 +1,8 @@
 $(document).on('page:update', function ( evt ) {
-	var s = skrollr.init();
+
+	var s = skrollr.init({
+		skrollrBody: 'home-index'
+	});
 
 	var viewportHeight = $(window).height();
 	var navHeight = $('#nav-menu').height();
