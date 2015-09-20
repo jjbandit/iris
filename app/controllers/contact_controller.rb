@@ -4,7 +4,7 @@ class ContactController < ApplicationController
 	before_filter :validate_message, only: :create
 
 	def create
-		cont = ContactMailer.contact(params[:message], params[:email], params[:name], params[:org])
+		cont = ContactMailer.contact(params[:message], params[:email], params[:name])
 		cont.deliver
 	end
 
@@ -14,9 +14,8 @@ class ContactController < ApplicationController
 		params.require(:email)
 		params.require(:name)
 		params.require(:message)
-		params.require(:org)
 
-		params.permit(:email, :name, :message, :org)
+		params.permit(:email, :name, :message)
 	end
 
 end

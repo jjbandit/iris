@@ -4,7 +4,7 @@ class ContactMailer < ApplicationMailer
 
 	layout 'mailer'
 
-	def contact message, email, name, org
+	def contact message, email, name
 
 		contact_address = 'revelstokesnowboard@gmail.com'
 		message_subject = 'IrisDynamics.com Contact Message from ' + name
@@ -12,7 +12,6 @@ class ContactMailer < ApplicationMailer
 		@email = email
 		@name = name
 		@message = message
-		@org = org
 
 		mail( to: contact_address,
 					reply_to: @email,
