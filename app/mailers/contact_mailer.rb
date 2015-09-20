@@ -1,12 +1,12 @@
 class ContactMailer < ApplicationMailer
-	default from: 'jesse.hughes.it@gmail.com'
+	default from: 'info@irisdynamics.com'
 	default subject: 'Message from IrisDynamics.com Contact'
 
 	layout 'mailer'
 
 	def contact message, email, name
 
-		contact_address = 'revelstokesnowboard@gmail.com'
+		contact_address = 'info@irisdynamics.com'
 		message_subject = 'IrisDynamics.com Contact Message from ' + name
 
 		@email = email
