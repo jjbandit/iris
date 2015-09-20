@@ -28,3 +28,6 @@ vendor/assets/bower.json
 
 # Custom tree command
 tree.sh
+
+# Csr
+irisdynamics.csr
