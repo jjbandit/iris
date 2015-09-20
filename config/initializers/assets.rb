@@ -1,6 +1,7 @@
 # Be sure to restart your server when you modify this file.
 
 Rails.application.config.assets.precompile += %w( owl-carousel2/dist/assets/owl.video.play.png )
+Rails.application.config.assets.precompile += %w( ckeditor/* )
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
