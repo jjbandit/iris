@@ -21,6 +21,8 @@ gem 'spree_sample', '3.0.1'
 gem 'deface', '1.0.1'
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", :branch => "3-0-stable"
 
+gem 'refinerycms', '~> 3.0'
+
 # Pagination gem
 gem 'kaminari'
 
@@ -38,7 +40,7 @@ gem 'devise'
 gem 'bower-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '~> 4.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Uglifier as compressor for JavaScript assets
