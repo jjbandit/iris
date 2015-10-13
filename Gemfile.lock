@@ -283,6 +283,11 @@ GEM
       refinerycms-images (= 3.0.0)
       refinerycms-pages (= 3.0.0)
       refinerycms-resources (= 3.0.0)
+    refinerycms-authentication-devise (1.0.4)
+      actionmailer (~> 4.2, >= 4.2.0)
+      devise (~> 3.0, >= 3.2.4)
+      friendly_id (~> 5.1.0)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-core (3.0.0)
       actionpack (>= 4.2.3, < 5.0)
       activerecord (>= 4.2.3, < 5.0)
@@ -476,6 +481,7 @@ DEPENDENCIES
   pg
   rails (~> 4.2)
   refinerycms (~> 3.0)
+  refinerycms-authentication-devise (~> 1.0)
   rspec
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

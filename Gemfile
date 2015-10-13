@@ -22,6 +22,7 @@ gem 'deface', '1.0.1'
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", :branch => "3-0-stable"
 
 gem 'refinerycms', '~> 3.0'
+gem 'refinerycms-authentication-devise', '~> 1.0'
 
 # Pagination gem
 gem 'kaminari'
