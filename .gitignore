@@ -15,12 +15,15 @@ tags
 !/log/.keep
 /tmp
 
+Session.vim
+
 # Gemfile.lock
 Gemfile.lock
 
 # Ignore dev and user assets
 public/spree
 public/system
+public/assets
 
 # Bower packages can be reimported with rake bower:update
 vendor/assets/bower_components/
@@ -31,3 +34,44 @@ tree.sh
 
 # Csr
 irisdynamics.csr
+
+# Rails
+.bundle
+db/*.sqlite3
+db/*.sqlite3-journal
+*.log
+tmp
+tmp/**/*
+
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
+coverage
+
+# Public Uploads
+public/system/*
+public/themes/*
+
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
+public/refinery/*
+
+# Vendor Cache
+vendor/cache
+
+# Acts as Indexed
+index/**/*
+
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+refinerycms-*.gem
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db

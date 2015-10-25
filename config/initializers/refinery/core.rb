@@ -39,7 +39,7 @@ Refinery::Core.configure do |config|
 
   # Should set this if concerned about DOS attacks. See
   # http://markevans.github.com/dragonfly/file.Configuration.html#Configuration
-  # config.dragonfly_secret = "4183f03b06b920b63707e95a9a57a1f45d4a218c0e6c6d20"
+  # config.dragonfly_secret = "727c5c2111d83ea9ce9eda37cf4800b99ebcbe6628ad4bda"
 
   # Register extra javascript for backend
   # config.register_javascript "prototype-rails"
@@ -53,7 +53,7 @@ Refinery::Core.configure do |config|
 
   # Specify a different Refinery::Core::Engine mount path than the default of "/".
   # Make sure you clear the `tmp/cache` directory after changing this setting.
-  config.mounted_path = "/"
+  config.mounted_path = "/content"
 
   # Specify the order Refinery plugins appear in the admin view.
   # Plugins in the list are placed, as ordered, before any plugins not in the list.

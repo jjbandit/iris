@@ -15,14 +15,21 @@ gem 'paperclip', '~> 4.2'
 gem 'spree_frontend', '3.0.1'
 gem 'spree_backend', '3.0.1'
 gem 'spree_core', '3.0.1'
-gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
-gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 gem 'spree_sample', '3.0.1'
+
 gem 'deface', '1.0.1'
+
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", :branch => "3-0-stable"
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 
 gem 'refinerycms', '~> 3.0'
-gem 'refinerycms-authentication-devise', '~> 1.0'
+
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
+
+gem 'spree-refinerycms-authentication', github: 'bricesanchez/spree-refinery-authentication', branch: '3-0-stable'
+
+# gem 'refinerycms-authentication-devise', '~> 1.0'
 
 # Pagination gem
 gem 'kaminari'
@@ -33,9 +40,6 @@ gem 'autoprefixer-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
-# Authentication gem
-gem 'devise'
 
 # Bower goodness
 gem 'bower-rails'
@@ -69,21 +73,23 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-	# Random data generator
-	gem 'lorem_ipsum_amet'
+  # Random data generator
+  gem 'lorem_ipsum_amet'
 
 group :development, :test do
-	gem 'rspec'
+  gem 'rspec'
 
-	# Deployment automation
-	gem 'capistrano', '~> 3.4.0'
-	gem 'capistrano-rbenv', '~> 2.0'
-	gem 'capistrano-bundler', '~> 1.1.2'
-	gem 'capistrano-rails', '~> 1.1.1'
-	gem 'capistrano-passenger', '~> 0.1.0'
+  # Deployment automation
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-passenger', '~> 0.1.0'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'pry'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
