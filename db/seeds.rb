@@ -26,3 +26,6 @@ end
 		image: File.open('public/images/CustomsandBorderPatrolPredator.jpg')
 	);
 end
+
+# Added by Refinery CMS Pages extension
+Refinery::Pages::Engine.load_seed
