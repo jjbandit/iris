@@ -21,8 +21,8 @@ Spree::Image.attachment_definitions[:attachment][:path] = ':rails_root/public/sy
 # Set path relative to public/ to retrieve images from
 Spree::Image.attachment_definitions[:attachment][:url] = '/system/spree/products/:id/:style/:basename.:extension';
 
-Spree.user_class = "User"
+Spree.user_class = "Spree::User"
 
-          Rails.application.config.to_prepare do
-            require_dependency 'spree/authentication_helpers'
-          end
+Rails.application.config.to_prepare do
+  require_dependency 'spree/authentication_helpers'
+end
