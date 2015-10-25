@@ -91,12 +91,9 @@ ActiveRecord::Schema.define(version: 20151025134416) do
     t.datetime "reset_password_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug"
-    t.string   "full_name"
   end
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
-  add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug", using: :btree
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
@@ -1145,6 +1142,7 @@ ActiveRecord::Schema.define(version: 20151025134416) do
     t.datetime "reset_password_sent_at"
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
+    t.string   "spree_api_key",          limit: 48
     t.datetime "remember_created_at"
     t.datetime "deleted_at"
     t.string   "confirmation_token"
@@ -1154,6 +1152,7 @@ ActiveRecord::Schema.define(version: 20151025134416) do
 
   add_index "spree_users", ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree
   add_index "spree_users", ["email"], name: "email_idx_unique", unique: true, using: :btree
+  add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key", using: :btree
 
   create_table "spree_variants", force: :cascade do |t|
     t.string   "sku",                                        default: "",    null: false
@@ -1204,27 +1203,5 @@ ActiveRecord::Schema.define(version: 20151025134416) do
 
   add_index "spree_zones", ["default_tax"], name: "index_spree_zones_on_default_tax", using: :btree
   add_index "spree_zones", ["kind"], name: "index_spree_zones_on_kind", using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                             default: "",    null: false
-    t.string   "encrypted_password",                default: "",    null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                     default: 0,     null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "admin",                             default: false
-    t.string   "spree_api_key",          limit: 48
-    t.integer  "ship_address_id"
-    t.integer  "bill_address_id"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

@@ -1,21 +1,13 @@
 Rails.application.routes.draw do
-  # This line mounts Refinery's routes at the root of your application.
-  # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
-  # If you would like to change where this extension is mounted, simply change the
-  # configuration option `mounted_path` to something different in config/initializers/refinery/core.rb
-  #
+
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
-
-
 
   # wysiwyg editor
   mount Ckeditor::Engine => '/ckeditor'
 
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/store'
-
-  devise_for :users
 
   resources :news
 
@@ -26,6 +18,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get '/corporate', to: 'home#corporate'
+
+  get '/test', to: 'home#test'
 
 #   get '/unauthorized', to: 'spree/user_sessions#create'
 

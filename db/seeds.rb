@@ -6,13 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.find_or_create_by(email: 'test@gmail.com') do |user|
-	user.admin = true,
-	user.password = 'password',
-	user.password_confirmation = 'password'
-	user.spree_roles << Spree::Role.find_or_create_by(name: "admin")
-end
-
 # Spree::Product.create(name: 'Control Loading Yoke', description: 'This is the description', price: '2000.00', shipping_category_id: 1)
 
 # Spree::Core::Engine.load_seed if defined?(Spree::Core)

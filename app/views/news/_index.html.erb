@@ -14,7 +14,7 @@
 			<%= link_to_next_page @allNews, 'More News', class: 'page-link fa fa-ellipsis-h'%>
 		</div>
 
-		<% if current_user.try(:admin?) %>
+		<% if spree_current_user.try(:admin?) %>
 			<div >
 				<%= link_to 'Create News', new_news_path, class: 'btn btn-default' %>
 			</div>

@@ -1,6 +1,6 @@
 <div>
 	<h1 class='news-buttons'> <%= @news.title %> </h1>
-	<% if current_user.try(:admin?) %>
+	<% if spree_current_user.admin? %>
 			<%= link_to 'Edit', edit_news_path(@news), class: 'btn btn-default news-buttons' %>
 			<%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger news-buttons' %>
 	<% end %>

@@ -25,12 +25,12 @@
 				<li class='about-link'><a href='/#about-heading'><h4> About </h4></a></li>
 				<li class='contact-link'><a href='/#contact-heading'><h4> Contact </h4></a> </li>
 				<li class='log-link'>
-					<% if user_signed_in? %>
-						<%= link_to main_app.destroy_user_session_path, method: :delete do %>
+					<% if spree_current_user %>
+						<%= link_to spree_logout_path, method: :delete do %>
 							<h4> Logout </h4>
 						<% end %>
 					<% else %>
-						<%= link_to main_app.new_user_session_path do %>
+						<%= link_to spree_login_path do %>
 							<h4> Login </h4>
 						<% end %>
 					</li>
