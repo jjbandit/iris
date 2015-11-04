@@ -3,31 +3,38 @@
 
 <div class='main-content' id='home-index'>
 
-  <section class='even'>
-    <div class='container'>
-      <%= render :partial => '/refinery/news/items/recent_posts' %>
-    </div>
-  </section>
-
+  <% stripe_class_counter = 1 %>
   <% @pages.each do |page| %>
-    <section class='odd'>
-      <div class='container'>
-        <div class='row-wrapper' id='overview'>
 
-          <div class='row'>
-            <% edit_url =  refinery.admin_edit_page_path(page.nested_url) %>
-            <h3>
-              <%= page.title %>
-            </h3>
-            <% if spree_current_user.try(:admin?) %>
-            <%= link_to("Edit", edit_url, target: '_blank') %>
-            <% end %>
-            <%= raw page.content_for :body %>
-          </div>
+    <% stripe_class_counter % 2 == 0 ? stripe_class = "even" : stripe_class = "odd" %>
+    <section class="<%= stripe_class %>" >
+      <div class='container'>
+        <div class='row-wrapper' id='<%= page.title.downcase %>'>
+
+          <%# I consider this a dirty, dirty hack.. but it works. %>
+          <%# Render the news index in position of the placeholder News Page. %>
+          <% if page.title == "News" %>
+            <%= render "news/index" %>
+
+          <% else %>
+            <div class='row'>
+              <% edit_url =  refinery.admin_edit_page_path(page.nested_url) %>
+              <h3>
+                <%= page.title %>
+              </h3>
+              <% if spree_current_user.try(:admin?) %>
+                <%= link_to("Edit", edit_url, target: '_blank') %>
+              <% end %>
+              <%= raw page.content_for :body %>
+            </div>
+
+          <% end %>
 
         </div>
       </div>
     </section>
+
+    <% stripe_class_counter += 1 %>
   <% end %>
 
 </div>
