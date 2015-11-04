@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def test
     @pages = Refinery::Page.find_by_path("home-content").children
+    @items = Refinery::News::Item.latest(5)
   end
 
   def corporate

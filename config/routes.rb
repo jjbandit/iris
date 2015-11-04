@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resource :contact, controller: 'contact'
 
   # Declare root view
-  root to: 'home#index'
+  root to: 'home#test'
 
   get '/corporate', to: 'home#corporate'
 

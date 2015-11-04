@@ -1,4 +1,4 @@
-<% controller_name == 'home' && action_name == 'index' ? offset_class = 'offset' : offset_class = '' %>
+<% current_page?(root_url) || current_page?('/test') ? offset_class = 'offset' : offset_class = '' %>
 
 <nav class='navbar navbar-default <%= offset_class %>' id='nav-menu'>
 

@@ -10,10 +10,22 @@ GIT
 
 GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: 83d4b3d2c52a681f07900c28adb28bc8da604733
+  revision: 90d4132be6275edd997beeb66bf3876b0207291d
   specs:
     turbolinks (3.0.0)
       coffee-rails
+
+GIT
+  remote: git://github.com/refinery/refinerycms-news.git
+  revision: 1a72148610487e25c74be05a6e73264c920ac96b
+  branch: master
+  specs:
+    refinerycms-news (3.0.0)
+      acts_as_indexed (~> 0.8.0)
+      friendly_id (~> 5.1.0)
+      globalize (>= 4.0.0, < 5.2)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
@@ -228,7 +240,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     monetize (1.3.1)
       money (~> 6.6)
     money (6.6.1)
@@ -347,6 +359,9 @@ GEM
       dragonfly (~> 1.0.0)
       globalize (>= 4.0.0, < 5.2)
       refinerycms-core (= 3.0.0)
+    refinerycms-settings (3.0.0)
+      friendly_id (~> 5.0, >= 5.0.1)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     routing-filter (0.5.1)
@@ -507,6 +522,7 @@ DEPENDENCIES
   pry
   rails (~> 4.2)
   refinerycms (~> 3.0)
+  refinerycms-news!
   rspec
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

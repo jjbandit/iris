@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+<%= render 'shared/nav_menu' %>
+
+<div class='main-content' id='home-index'>
+
+  <section class='even'>
+    <div class='container'>
+      <%= render :partial => '/refinery/news/items/recent_posts' %>
+    </div>
+  </section>
+
+  <% @pages.each do |page| %>
+    <section class='odd'>
+      <div class='container'>
+        <div class='row-wrapper' id='overview'>
+
+          <div class='row'>
+            <% edit_url =  refinery.admin_edit_page_path(page.nested_url) %>
+            <h3>
+              <%= page.title %>
+            </h3>
+            <% if spree_current_user.try(:admin?) %>
+            <%= link_to("Edit", edit_url, target: '_blank') %>
+            <% end %>
+            <%= raw page.content_for :body %>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  <% end %>
+
+</div>
