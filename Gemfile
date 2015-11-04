@@ -25,6 +25,8 @@ gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express',
 
 gem 'refinerycms', '~> 3.0'
 
+gem 'refinerycms-wymeditor', '~> 1.0'
+
 gem 'refinerycms-news', github: 'refinery/refinerycms-news', branch: 'master'
 
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
